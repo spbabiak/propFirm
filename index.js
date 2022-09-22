@@ -33,11 +33,11 @@ programsItem.addEventListener('click', event => {
 })
 
 // Facts Slider
-let width = screen.width;
+let screenWidth = screen.width;
 
 let slide = 0
 
-if(width < 960) {
+if(screenWidth < 960) {
 	let slidesCount = slider.children.length - 1
 	let slideWidth = 100 / (slidesCount + 1)
 
@@ -67,7 +67,9 @@ if(width < 960) {
 let testimonialSlidesCount = testimonialSlider.children.length - 1
 let testimonialSlideWidth = 100 / (testimonialSlidesCount + 1)
 
-testimonialSlider.style.width = (testimonialSlidesCount + 1) * 100 + '%'
+if(screenWidth < 1440) {
+	testimonialSlider.style.width = (testimonialSlidesCount + 1) * 100 + '%'
+}
 
 for(let i = 0; i <= testimonialSlidesCount; i++) {
     let circleElement = document.createElement('li')

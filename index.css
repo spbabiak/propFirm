@@ -29,6 +29,7 @@ a {
 	text-decoration: none;
 }
 
+
 /* Make images easier to work with */
 img,
 picture {
@@ -160,6 +161,19 @@ body > section + section:not(:first-child) {
 	padding-top: 60px;
 	padding-bottom: 80px;
 }
+
+.nav-horizontal a,
+.nav-vertical a {
+	color: #fff;
+}
+
+.nav-horizontal a:hover,
+.nav-vertical a:hover {
+	color: #04d9d9;
+}
+
+footer .nav-section a { color: #024059; }
+footer .nav-section a:hover { color: #04d9d9; }
 
 .btn {
 	display: block; 
@@ -572,6 +586,8 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 
 .programs-section .section-text { max-width: 800px; }
 
+.nav-horizontal { display: none; }
+
 /* --------------------------- */
 /* Utility classes             */
 /* --------------------------- */
@@ -894,6 +910,10 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 	 	font-size: 22px;
 	}
 
+	.main-header { top: 30px; }
+	.nav-vertical { top: -30px; }
+	.hero-content { padding: 315px 0 375px 0; }
+
 	.benefit p { display: block; }
 	.mb { margin-bottom: 75px; }
 
@@ -926,7 +946,7 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
   }
 
   .facts-carousel { 
-  	height: 140px; 
+  	height: 160px; 
   	margin-left: 12px;
   }
 
@@ -1032,18 +1052,23 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 			input, 
 			select { margin-bottom: 40px; }
 
+			.programs-section { overflow: hidden; }
 			.programs-section .section-text { position: relative; }
 			.programs-section .section-text::before {
 				content: "";
 				background-image: url('./imgs/pc_img.png');
 				background-size: cover;
 				position: absolute;
-        top: -80px;
-		    right: -125px;
-		    width: 290px;
-		    height: 253px;
+        top: -190px;
+		    right: -160px;
+	     	width: 370px;
+				height: 324px;
 		    z-index: -1;
 			}
+
+			body > section + section:nth-child(3) { padding-top: 190px; }
+
+			.hero-descript {  margin-bottom: 35px; }
 }
 
 @media screen and (min-width: 1280px) {
@@ -1057,28 +1082,120 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 	.mb { margin-bottom: 100px; }
 	.footer-top { padding-bottom: 80px; }
 
+	.main-header .wrapper { align-items: center; }
+	.hero-content { padding: 300px 0 400px 0; }
+	.hero-descript {  margin-bottom: 70px; }
+
 	.programs-section .section-text::before {
-    top: -130px;
-    right: -125px;
+    top: -220px;
+    right: -200px;
 	}
 
+	body > section + section:nth-child(3) { padding-top: 220px; }
+
+	.facts { max-width: 940px; }
+
+	.benefits-section .section-content .benefit {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+	}
+
+	.benefit-text { 
+		flex-basis: inherit; 
+		margin-left: 50px;
+		flex-grow: 1;
+	}
+
+	.benefit-text h3 { margin-top: 0; }
+
+	.why-us-section h2 { text-align: left; }
+
+	.why-us-section .benefit {
+    align-items: flex-start;
+    text-align: left;
+    flex-basis: 26%;
+	}
+
+	.why-us-section .benefit:nth-child(4) { margin-bottom: 0; }
 }
 
 @media screen and (min-width: 1440px) {
 	.nav-section-wrapper { max-width: 700px; justify-content: space-between;}
-	
-	.programs-section { overflow: hidden; }
-	.programs-section .section-text::before { 
-		top: -130px;
-    right: -630px;
-    width: 580px;
-    height: 507px;
+	.programs-section .section-text::before { right: -300px; }
+	.facts { max-width: 1100px; }
+
+	.nav-horizontal { 
+		display: block; 
+		width: 100%;
+		max-width: 592px; 
 	}
+
+	.nav-horizontal ul {
+		justify-content: space-between;	
+	}
+
+	.nav-horizontal ul li { 
+		font-size: 22px;
+		position: relative;
+		top: 0;
+		left: 0;
+		margin-bottom: 15px;
+	}
+
+	.nav-horizontal ul li ul {
+		position: absolute;
+    top: 50px;
+    left: -50px;
+    width: 120px;
+	}
+
+	.menu-btn-wrapper { display: none; }
+
+	.testimonial-text { min-height: 249px; }
 }
 
 @media screen and (min-width: 1600px) {
-	.programs-section .section-text::before { right: -807px; }
+	.programs-section .section-text::before { 
+		right: -780px; 
+		width: 650px;
+    height: 568px;
+  }
+
+  .facts { max-width: 1260px; }
+
+  .benefits-section .section-content { padding-left: 50px; }
+
+  .testimonial-text { min-height: 222px; }
 }
+
+@media screen and (min-width: 1920px) {
+	.facts { max-width: 1560px; }
+	.testimonial-text { min-height: 195px; }
+
+	.contact-section .section-text {
+		margin-left: 142px;
+		text-align: left;
+	}
+
+ 	.form-wrapper {
+ 		display: flex;
+  	width: 1260px;
+ 	}
+
+ 	.main-form { width: 800px; }
+
+ 	.contacts-wrapper {
+ 		width: 483px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0;
+ 	}
+
+ 	.contacts-wrapper .contact-info:not(:first-child) { margin-top: 35px; }
+ 	.contacts-wrapper > div > .contact-info { margin-left: 0; }
+}
+
+
 
 
 
