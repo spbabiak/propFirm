@@ -895,6 +895,11 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 
 
 /* Media queries */
+@media screen and (min-width: 340px) {
+	.contact-section .section-text {
+    text-align: center;
+ 	}
+}
 
 @media screen and (min-width: 960px) {
 	body { font-size: 18px; }
