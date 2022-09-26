@@ -4,6 +4,8 @@
 // Switcher Controls ------------------------------------//
 // Facts Slider -----------------------------------------//
 // Testimonials Slider ----------------------------------//
+// Table Column Slider ----------------------------------//
+
 
 const menuBtn = document.querySelector('.menu-btn-wrapper')
 const navVertical = document.querySelector('.nav-vertical')
@@ -164,4 +166,34 @@ testimonialCircleControls.forEach((circle, index) => {
 })
 
 // Testimonials Slider End ------------------------------------------------------------------------------
+
+// Table Column Slider ----------------------------------------------------------------------------------
+const tableArrowLeft = document.querySelector('.table-carousel .left')
+const tableArrowRight = document.querySelector('.table-carousel .right')
+const tableCell = document.querySelectorAll('.table-row .slide')
+const tabelColumnLabel = document.querySelector('.label-wrapper')
+
+function moveColumn() {
+	tableCell.forEach(item => {
+		item.style.transform = 'translateX(' + tableColumnIndex * -100 + '%)'
+	})	
+
+	if(tableColumnIndex == 1) { 
+		tabelColumnLabel.style.display = 'block' 
+	} else {
+		tabelColumnLabel.style.display = 'none'	
+	}
+}
+
+let tableColumnIndex = 0
+tableArrowRight.onclick = () => {
+ 	tableColumnIndex = (tableColumnIndex < 2) ? tableColumnIndex + 1 : 0
+    moveColumn()
+}
+
+tableArrowLeft.onclick = () => {
+	tableColumnIndex = (tableColumnIndex > 0) ? tableColumnIndex - 1 : 2
+	moveColumn()
+}
+// Table Column Slider  End ----------------------------------------------------------------------------------
 
