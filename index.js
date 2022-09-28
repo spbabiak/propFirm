@@ -137,33 +137,33 @@ if(screenWidth < 960) {
 // Facts Slider End ------------------------------------------------------------------------------------
 
 // Testimonials Slider ------------------------------------------------------------------------------
-let testimonialSlidesCount = testimonialSlider.children.length - 1
-let testimonialSlideWidth = 100 / (testimonialSlidesCount + 1)
+// let testimonialSlidesCount = testimonialSlider.children.length - 1
+// let testimonialSlideWidth = 100 / (testimonialSlidesCount + 1)
 
-if(screenWidth < 1440) {
-	testimonialSlider.style.width = (testimonialSlidesCount + 1) * 100 + '%'
-}
+// if(screenWidth < 1440) {
+// 	testimonialSlider.style.width = (testimonialSlidesCount + 1) * 100 + '%'
+// }
 
-for(let i = 0; i <= testimonialSlidesCount; i++) {
-    let circleElement = document.createElement('li')
-    testimonialCirclesWrapper.appendChild(circleElement)
-}
+// for(let i = 0; i <= testimonialSlidesCount; i++) {
+//     let circleElement = document.createElement('li')
+//     testimonialCirclesWrapper.appendChild(circleElement)
+// }
 
-const testimonialCircleControls = document.querySelectorAll('.testimonials .controls .circles li')
-testimonialCirclesWrapper.firstChild.classList.add('active')
+// const testimonialCircleControls = document.querySelectorAll('.testimonials .controls .circles li')
+// testimonialCirclesWrapper.firstChild.classList.add('active')
 
-function moveTestimonialSlide() {
-	testimonialSlider.style.transform = 'translate(' + slide * -testimonialSlideWidth + '%)'
-    testimonialCirclesWrapper.querySelector('.active').classList.remove('active')
-    testimonialCircleControls[slide].classList.add('active')	
-}
+// function moveTestimonialSlide() {
+// 	testimonialSlider.style.transform = 'translate(' + slide * -testimonialSlideWidth + '%)'
+//     testimonialCirclesWrapper.querySelector('.active').classList.remove('active')
+//     testimonialCircleControls[slide].classList.add('active')	
+// }
 
-testimonialCircleControls.forEach((circle, index) => {
-    circle.onclick = () => {
-        slide = index
-        moveTestimonialSlide()
-    }
-})
+// testimonialCircleControls.forEach((circle, index) => {
+//     circle.onclick = () => {
+//         slide = index
+//         moveTestimonialSlide()
+//     }
+// })
 
 // Testimonials Slider End ------------------------------------------------------------------------------
 

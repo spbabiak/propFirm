@@ -206,6 +206,21 @@ body > section + section:not(:first-child) {
 	padding-bottom: 80px;
 }
 
+.tradingview-widget-copyright { display: none; }
+
+.langs { position: relative; }
+.langs::after {
+	content: "";
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -17px;
+    z-index: 1;
+}
+
 .nav-horizontal a,
 .nav-vertical a {
 	color: #fff;
@@ -1382,6 +1397,10 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 	.testimonial-text { min-height: 249px; }
 }
 
+@media screen and (min-width: 1500px) {
+	.label-wrapper { right: 343px; }
+}
+
 @media screen and (min-width: 1560px) {
 	.label-wrapper { right: 354px; }
 }
@@ -1411,7 +1430,7 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 }
 
 @media screen and (min-width: 1920px) {
-	.label-wrapper { right: 496px;}
+	.label-wrapper { right: 496px; }
 	.facts { max-width: 1560px; }
 	.testimonial-text { min-height: 195px; }
 

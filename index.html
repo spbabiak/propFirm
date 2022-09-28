@@ -11,6 +11,43 @@
 </head>
 <body>
 	<header class="main-header">
+		<!-- TradingView Widget BEGIN -->
+		<div class="tradingview-widget-container">
+		  <div class="tradingview-widget-container__widget"></div>
+		  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/" rel="noopener" target="_blank"><span class="blue-text">Markets</span></a> by TradingView</div>
+		  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+		  {
+		  "symbols": [
+		    {
+		      "proName": "FOREXCOM:SPXUSD",
+		      "title": "S&P 500"
+		    },
+		    {
+		      "proName": "FOREXCOM:NSXUSD",
+		      "title": "US 100"
+		    },
+		    {
+		      "proName": "FX_IDC:EURUSD",
+		      "title": "EUR/USD"
+		    },
+		    {
+		      "proName": "BITSTAMP:BTCUSD",
+		      "title": "Bitcoin"
+		    },
+		    {
+		      "proName": "BITSTAMP:ETHUSD",
+		      "title": "Ethereum"
+		    }
+		  ],
+		  "showSymbolLogo": true,
+		  "colorTheme": "dark",
+		  "isTransparent": false,
+		  "displayMode": "adaptive",
+		  "locale": "en"
+		}
+		  </script>
+		</div>
+		<!-- TradingView Widget END -->
 		<div class="wrapper flex">
 			<div class="wrapper-logo flex" style="flex-grow: 1;">
 				<a href="#">
@@ -58,12 +95,9 @@
 				<div class="login-lang-wrapper">
 					<div><a class="login-cta border border-radius-10 accent-text" href="#">Client Login</a></div>
 					<div class="flex" style="align-items: center;">
-						<ul>
+						<ul class="langs">
 							<li><img src="./imgs/flag_england.png" alt="England flag"></li>
-							<li style="display: none;"><img src="./imgs/flag_england.png" alt="German flag"></li>
-							<li style="display: none;"><img src="./imgs/flag_england.png" alt="Italian flag"></li>
 						</ul>
-						<div class="drop-down"></div>
 					</div>
 				</div>
 			</div>
@@ -100,7 +134,7 @@ Deposit in Crypto and Receive an Instant Bonus *</p>
 					</div>
 					<div class="slide">
 						<span class="accent-text ff-secondary ff-bold" style="font-size: 50px;">4 Hours</span>
-						<span class="light-text"><span class="break-line">Fast Withdrawals</span> Processing</span>
+						<span class="light-text">Fast Withdrawals Processing</span>
 					</div>
 				</div>
 				<div class="controls">
@@ -187,15 +221,15 @@ Deposit in Crypto and Receive an Instant Bonus *</p>
 						<li class="table-row">
 							<div class="table-carousel">
 								<div class="slider">
-									<span>Starter Funded Capital</span>
+									<span>Minimum Deposit</span>
 									<div class="slide">
-										<span>$6,000</span>
+										<span>$100<br>MICRO ACCOUNT</span>
 									</div>
 									<div class="slide" >
-										<span>$10,000</span>
+										<span>$2,000<br>STANDARD ACCOUNT</span>
 									</div>
 									<div class="slide" >
-										<span>$20,000</span>
+										<span>$25,000<br>VIP ACCOUNT</span>
 									</div>
 								</div>
 							</div>
@@ -203,15 +237,15 @@ Deposit in Crypto and Receive an Instant Bonus *</p>
 						<li class="table-row">
 							<div class="table-carousel">
 								<div class="slider">
-									<span>Profit Target</span>
+									<span>Trading Platform</span>
 									<div class="slide">
-										<span>$375 / 6%</span>
+										<span>cTrader/MT4/MT5</span>
 									</div>
 									<div class="slide" >
-										<span>$600 / 6%</span>
+										<span>cTrader/MT4/MT5</span>
 									</div>
 									<div class="slide" >
-										<span>$1,400 / 6%</span>
+										<span>cTrader/MT4/MT5</span>
 									</div>
 								</div>
 							</div>
@@ -219,15 +253,15 @@ Deposit in Crypto and Receive an Instant Bonus *</p>
 						<li class="table-row">
 							<div class="table-carousel">
 								<div class="slider">
-									<span>Stopout</span>
+									<span>Min Spreads in Pips</span>
 									<div class="slide">
-										<span>$5,750 / $-250</span>
+										<span>0.1</span>
 									</div>
 									<div class="slide" >
-										<span>$9,600 / $-400</span>
+										<span>0.1</span>
 									</div>
 									<div class="slide" >
-										<span>$19,200 / $-800</span>
+										<span>0.1</span>
 									</div>
 								</div>
 							</div>
@@ -235,15 +269,15 @@ Deposit in Crypto and Receive an Instant Bonus *</p>
 						<li class="table-row">
 							<div class="table-carousel">
 								<div class="slider">
-									<span>Account Leverage</span>
+									<span>Max Leverage</span>
 									<div class="slide">
-										<span>1:6</span>
+										<span>1000:1</span>
 									</div>
 									<div class="slide" >
-										<span>1:6</span>
+										<span>1000:1</span>
 									</div>
 									<div class="slide" >
-										<span>1:6</span>
+										<span>1000:1</span>
 									</div>
 								</div>
 							</div>
@@ -251,15 +285,15 @@ Deposit in Crypto and Receive an Instant Bonus *</p>
 						<li class="table-row">
 							<div class="table-carousel">
 								<div class="slider">
-									<span>Stoploss Required</span>
+									<span>Several Location</span>
 									<div class="slide">
-										<span>1.5%</span>
+										<span>London</span>
 									</div>
 									<div class="slide" >
-										<span>1.5%</span>
+										<span>London</span>
 									</div>
 									<div class="slide" >
-										<span>1.5%</span>
+										<span>London</span>
 									</div>
 								</div>
 							</div>
@@ -267,15 +301,15 @@ Deposit in Crypto and Receive an Instant Bonus *</p>
 						<li class="table-row">
 							<div class="table-carousel">
 								<div class="slider">
-									<span>Maximum Time</span>
+									<span>Microlot Trading (0.01)</span>
 									<div class="slide">
-										<span>180 Days</span>
+										<span>Yes</span>
 									</div>
 									<div class="slide" >
-										<span>180 Days</span>
+										<span>Yes</span>
 									</div>
 									<div class="slide" >
-										<span>180 Days</span>
+										<span>Yes</span>
 									</div>
 								</div>
 							</div>
@@ -283,15 +317,15 @@ Deposit in Crypto and Receive an Instant Bonus *</p>
 						<li class="table-row">
 							<div class="table-carousel">
 								<div class="slider">
-									<span>Next Funding Level</span>
+									<span>Currency Pairs</span>
 									<div class="slide">
-										<span>$10,000 / X4</span>
+										<span>61</span>
 									</div>
 									<div class="slide" >
-										<span>$25,000 / X4</span>
+										<span>61</span>
 									</div>
 									<div class="slide" >
-										<span>$100,000 / X4</span>
+										<span>61</span>
 									</div>
 								</div>
 							</div>
@@ -299,15 +333,15 @@ Deposit in Crypto and Receive an Instant Bonus *</p>
 						<li class="table-row">
 							<div class="table-carousel">
 								<div class="slider">
-									<span>Payout Split</span>
+									<span>Index CFD Trading</span>
 									<div class="slide">
-										<span>50%</span>
+										<span>Yes</span>
 									</div>
 									<div class="slide" >
-										<span>50%</span>
+										<span>Yes</span>
 									</div>
 									<div class="slide" >
-										<span>50%</span>
+										<span>Yes</span>
 									</div>
 								</div>
 							</div>
@@ -315,15 +349,15 @@ Deposit in Crypto and Receive an Instant Bonus *</p>
 						<li class="table-row">
 							<div class="table-carousel">
 								<div class="slider">
-									<span>Guaranteed Funding</span>
+									<span>One Click Trading</span>
 									<div class="slide">
-										<span>2.56 Million</span>
+										<span>Yes</span>
 									</div>
 									<div class="slide" >
-										<span>2.56 Million</span>
+										<span>Yes</span>
 									</div>
 									<div class="slide" >
-										<span>2.56 Million</span>
+										<span>Yes</span>
 									</div>
 								</div>
 							</div>
@@ -331,15 +365,47 @@ Deposit in Crypto and Receive an Instant Bonus *</p>
 						<li class="table-row">
 							<div class="table-carousel">
 								<div class="slider">
-									<span>One Participation Fee</span>
+									<span>Islamic Accounts</span>
 									<div class="slide">
-										<span>€235</span>
+										<span>Yes</span>
 									</div>
 									<div class="slide" >
-										<span>€385</span>
+										<span>Yes</span>
 									</div>
 									<div class="slide" >
-										<span>$€745</span>
+										<span>Yes</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="table-row">
+							<div class="table-carousel">
+								<div class="slider">
+									<span>Trading Styles Allowed</span>
+									<div class="slide">
+										<span>All</span>
+									</div>
+									<div class="slide" >
+										<span>All</span>
+									</div>
+									<div class="slide" >
+										<span>All</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="table-row">
+							<div class="table-carousel">
+								<div class="slider">
+									<span>Order Restrictions</span>
+									<div class="slide">
+										<span>None</span>
+									</div>
+									<div class="slide" >
+										<span>None</span>
+									</div>
+									<div class="slide" >
+										<span>None</span>
 									</div>
 								</div>
 							</div>
@@ -349,45 +415,13 @@ Deposit in Crypto and Receive an Instant Bonus *</p>
 								<div class="slider">
 									<span style="padding: 25px 0 25px 0;"></span>
 									<div class="slide" style="padding: 20px 0px;">
-										<span><a href="#" class="btn border-radius-10 accent-bg-1 dark-text ff-bold" style="margin-inline: auto; width: 116px; height: 46px; padding: 9px 23px 12px 22px;">sign up</a></span>
+										<span><a href="#" class="btn border-radius-10 accent-bg-1 dark-text ff-bold" style="margin-inline: auto; width: 116px; height: 46px; padding: 10px;">Trade Now</a></span>
 									</div>
 									<div class="slide" style="padding: 20px 0px;">
-										<span><a href="#" class="btn border-radius-10 accent-bg-1 dark-text ff-bold" style="margin-inline: auto; width: 116px; height: 46px; padding: 9px 23px 12px 22px;">sign up</a></span>
+										<span><a href="#" class="btn border-radius-10 accent-bg-1 dark-text ff-bold" style="margin-inline: auto; width: 116px; height: 46px; padding: 10px;">Trade Now</a></span>
 									</div>
 									<div class="slide" style="padding: 20px 0px;">
-										<span><a href="#" class="btn border-radius-10 accent-bg-1 dark-text ff-bold" style="margin-inline: auto; width: 116px; height: 46px; padding: 9px 23px 12px 22px;">sign up</a></span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="table-row">
-							<div class="table-carousel">
-								<div class="slider">
-									<span>Growth Agenda</span>
-									<div class="slide">
-										<span>Up to 2.56M Guaranteed</span>
-									</div>
-									<div class="slide" >
-										<span>Up to 2.56M Guaranteed</span>
-									</div>
-									<div class="slide" >
-										<span>Up to 2.56M Guaranteed</span>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="table-row">
-							<div class="table-carousel">
-								<div class="slider">
-									<span>Profit Target</span>
-									<div class="slide">
-										<span>%10</span>
-									</div>
-									<div class="slide" >
-										<span>%10</span>
-									</div>
-									<div class="slide" >
-										<span>%10</span>
+										<span><a href="#" class="btn border-radius-10 accent-bg-1 dark-text ff-bold" style="margin-inline: auto; width: 116px; height: 46px; padding: 10px;">Trade Now</a></span>
 									</div>
 								</div>
 							</div>
@@ -588,13 +622,13 @@ Deposit in Crypto and Receive an Instant Bonus *</p>
 						  		</div>
 						  		<div class="contact-info flex">
 						  			<span class="contact-icon icon-phone"></span>
-						  			<div><span>+44 (20) 8068 0793</span><br><span>9AM - 6PM WET</span></div>
+						  			<div><span>+1 787-932-7001</span><br><span>9AM - 6PM WET</span></div>
 						  		</div>
 					  		</div>
 				  		
 					  		<div class="contact-info flex">
 					  			<span class="contact-icon icon-address"></span>
-					  			<div><span><strong>Headquarters</strong></span><br><span>14 Haroshet st, Raanaa, Israel</span><br><br>
+					  			<div><span><strong>Headquarters</strong></span><br><span>Suite 305, Griffith Corporate Centre,<br>  Beachmont, Kingstown, <br>Saint Vincent and the Grenadines</span><br><br>
 								<span><strong>UK Office</strong><span><br><span>Enstar House, 168, Praed Street,<br> London, United Kingdom, W2 1RH</span>
 								</div>
 					  		</div>
