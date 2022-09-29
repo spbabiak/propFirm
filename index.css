@@ -463,7 +463,7 @@ li > ul {
 	height: 21px;
 	background-image: url('./imgs/icon_email.png');
 	background-repeat: no-repeat;
-	background-size: cover;	
+	background-size: contain;	
 }
 
 .icon-phone {
@@ -472,7 +472,7 @@ li > ul {
 	height: 21px;
 	background-image: url('./imgs/icon_phone.png');
 	background-repeat: no-repeat;
-	background-size: cover;	
+	background-size: contain;	
 }
 
 .icon-address {
@@ -481,7 +481,7 @@ li > ul {
 	height: 22px;
 	background-image: url('./imgs/icon_address.png');
 	background-repeat: no-repeat;
-	background-size: cover;		
+	background-size: contain;		
 }
 
 .icon-in {
