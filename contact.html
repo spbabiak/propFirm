@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<title>Prop Firm</title>
+</head>
+<body>
+	<header class="main-header">
+		<div class="wrapper flex">
+			<div class="wrapper-logo" style="flex-grow: 1;">
+				<a class="flex" href="index.html" style="align-items: center;">
+					<div class="logo-mark" style="width: 51px; height: 58px;">
+						<img src="./imgs/logo_mark.png" alt="Circle with three lines">
+					</div>
+					<div class="light-text logo-text"><span class="ff-bold">Prop</span> Firm</div>
+				</a>	
+			</div>
+			<nav class="nav-horizontal">
+				<ul class="flex light-text">
+					<li><a href="index.html">Home</a></li>
+					<li class="position-relative drop-down">
+						<a href="#">Markets</a>
+						<ul class="drop-down-list">
+							<li><a href="forex.html">Forex</a></li>
+							<li><a href="commodities_and_indices.html">Commodities and Indices</a></li>
+							<li><a href="cryptocurrencies.html">Cryptocurrencies</a></li>
+						</ul>
+					</li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="partners.html">Partners </a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+			<nav class="nav-vertical">
+				<div class="close-btn"></div>
+				<ul class="light-text">
+					<li><a href="index.html">Home</a></li>
+					<li>
+						<div class="position-relative drop-down"><a href="#">Markets</a></div>
+						<ul class="drop-down-list">
+							<li><a href="forex.html">Forex</a></li>
+							<li><a href="commodities_and_indices.html">Commodities and Indices</a></li>
+							<li><a href="cryptocurrencies.html">Cryptocurrencies</a></li>
+						</ul>
+					</li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="partners.html">Partners</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+			<div class="flex" style="align-items: center;">
+				<div class="menu-btn-wrapper" style="width: 40px; height: 40px;">
+					<div class="menu-btn"></div>
+				</div>
+				<div class="login-lang-wrapper">
+					<div><a class="login-cta border border-radius-10 accent-text" href="#">Client Login</a></div>
+					<div class="flex" style="align-items: center;">
+						<ul class="langs">
+							<li><img src="./imgs/flag_england.png" alt="England flag"></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="page-hero-section">
+		<div class="wrapper">
+			<div class="page-hero-content">
+				<h1 class="hero-title accent-text">Contact</h1>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact" class="contact-section bg-secondary">
+		<div class="wrapper">
+			<div class="section-text">
+				<h2>We are Here For You</h2>
+				<p>Talk to us, we promise to respond soon.</p>
+			</div>
+			<div class="section-content">
+				<div class="form-wrapper border-radius-10">
+					<form id="main-form" class="main-form" action="" method="post">
+						<label>
+							<input id="POST-name" type="text" name="name" placeholder="First name">
+							<span class="error_name" aria-live="polite"></span>
+						</label>
+							
+						<label>
+							<input id="POST-surname" type="text" name="surname" placeholder="Last name">
+							<span class="error_surname" aria-live="polite"></span>
+						</label>
+				
+						<label>
+							<input id="POST-email" type="email" name="email" placeholder="Email">
+							<span class="error_email" aria-live="polite"></span>
+						</label>
+					
+						<label>
+							<input id="POST-phone" type="tel" name="phone" placeholder="Phone number">
+							<span class="error_phone" aria-live="polite"></span>
+						</label>
+
+						<label>
+							<input id="POST-country" type="text" name="country" placeholder="Country of residence">
+							<span class="country" aria-live="polite"></span>
+						</label>
+
+						<label>
+							<select id="POST-platform" name="POST-platform">
+							    <option value="0" selected>Platform</option>
+							    <option value="Metatrader 4">Metatrader 4</option>
+							    <option value="Metatrader 5">Metatrader 5</option>
+							</select>
+							<span class="error_platform" aria-live="polite"></span>
+						</label>
+
+						<label>
+							<textarea id="POST-subject" name="POST-subject" placeholder="Subject" cols="4" rows="4"></textarea>
+						</label>
+					
+					 	<button class="btn border-radius-10 accent-bg-1 dark-text ff-bold" type="submit">Start now!</button>
+						
+			  		</form>
+			  	
+				  	<div class="contacts-wrapper light-text">
+				  		<span class="label accent-text ff-bold">Reach Us</span>
+				  		<div class="flex flex-wrap">
+					  		<div>
+						  		<div class="contact-info flex">
+						  			<span class="contact-icon icon-email"></span>
+						  			<span>support@cfxm.com</span>
+						  		</div>
+						  		<div class="contact-info flex">
+						  			<span class="contact-icon icon-phone"></span>
+						  			<div><span>+1 787-932-7001</span><br><span>9AM - 6PM WET</span></div>
+						  		</div>
+					  		</div>
+				  		
+					  		<div class="contact-info flex">
+					  			<span class="contact-icon icon-address"></span>
+					  			<div><span><strong>Headquarters</strong></span><br><span>Suite 305, Griffith Corporate Centre,<br>  Beachmont, Kingstown, <br>Saint Vincent and the Grenadines</span>
+								</div>
+					  		</div>
+				  		</div>
+				  	</div>
+				</div>
+		  	</div>
+		</div>		
+	</section>
+
+	<footer style="margin-top: 80px;">
+		<div class="wrapper">
+			<div class="footer-top flex">
+				<div class="logo-section" style="flex-grow: 1;">
+					<span class="logo-dark"></span>
+					<ul class="social-icons flex">
+						<li class="icon-in"><a href="#"></a></li>
+						<li class="icon-twitter"><a href="#"></a></li>
+						<li class="icon-fb"><a href="#"></a></li>
+						<li class="icon-youtube"><a href="#"></a></li>
+						<li class="icon-insta"><a href="#"></a></li>
+					</ul>
+					<span class="copyright-1">© Prop Firm 2022</span>
+				</div>
+				<div class="nav-section-wrapper flex flex-wrap">
+					<ul class="nav-section">
+						<li><a href="#">Programs</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+					<ul class="nav-section">
+						<li><a href="#">Privacy Police</a></li>
+						<li><a href="#">Terms Of Service</a></li>
+						<li><a href="#">Risk Disclosure</a></li>
+					</ul>
+				
+					<div class="payment-icons"></div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="disclaimer wrapper">
+				<p>Prop Firm does not directly solicit customers from Canada. People who register for our programs do so at their own volition. Prop Firm does not take into consideration your personal financial situation. If you require financial advice, it is recommended that you speak to a financial adviser or licensed professional. Prop Firm does not act as or conduct services as a broker. Prop Firm does not act as or conduct services as a custodian.</p>
+				<br>
+                <p>Purchases of programs should not be considered deposits. All program fees are used for operation costs including, but not limited to, staff, technology and other business related expenses.</p>
+			</div>
+			<div class="copyright-2">© Prop Firm 2022</div>
+		</div>
+		
+	</footer>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>

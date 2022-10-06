@@ -5,13 +5,12 @@
 // Facts Slider -----------------------------------------//
 // Testimonials Slider ----------------------------------//
 // Table Column Slider ----------------------------------//
+// Popup Form -------------------------------------------//
 
 
 const menuBtn = document.querySelector('.menu-btn-wrapper')
 const navVertical = document.querySelector('.nav-vertical')
-const closeBtn = document.querySelector('.close-btn')
-const programsItem = document.querySelector('.programs')
-const programsList = document.querySelector('.programs-list')
+const menuCloseBtn = navVertical.querySelector('.close-btn')
 
 const slider = document.querySelector('.facts-slider')
 const testimonialSlider = document.querySelector('.testimonials-slider')
@@ -52,30 +51,34 @@ switcherContolsArray.forEach(item => {
 // Switcher Controls End ---------------------------------------------------------------------
 
 // Currency Switcher Mobile ---------------------------------------------------------------------
-currencySwitcherContolMobile.forEach(item => {
-	const currencyItems = item.querySelectorAll('li')
-	const currencyItemsArray = Array.from(currencyItems)
-	const items = currencyArray.push(currencyItemsArray)
-})
-
-let wholeCurrencyArray
-for(let i = 0; i < currencyArray.length - 1; i++) {
-	wholeCurrencyArray = currencyArray[i].concat(currencyArray[i+1])
-}
-
-wholeCurrencyArray.forEach(item => {
-	item.addEventListener('click', event => {
-		for(let i = 0; i < wholeCurrencyArray.length; i++) {
-			if(wholeCurrencyArray[i].classList == 'active') {
-				wholeCurrencyArray[i].classList.remove('active')		
-			}
-		}
-
-		if(item.classList !== 'active') {
-			item.classList.add('active')
-		}
+if(currencySwitcherContolMobile) {
+	currencySwitcherContolMobile.forEach(item => {
+		const currencyItems = item.querySelectorAll('li')
+		const currencyItemsArray = Array.from(currencyItems)
+		const items = currencyArray.push(currencyItemsArray)
 	})
-})
+
+	let wholeCurrencyArray
+	for(let i = 0; i < currencyArray.length - 1; i++) {
+		wholeCurrencyArray = currencyArray[i].concat(currencyArray[i+1])
+	}
+
+	if(wholeCurrencyArray)  {
+		wholeCurrencyArray.forEach(item => {
+			item.addEventListener('click', event => {
+				for(let i = 0; i < wholeCurrencyArray.length; i++) {
+					if(wholeCurrencyArray[i].classList == 'active') {
+						wholeCurrencyArray[i].classList.remove('active')		
+					}
+				}
+
+				if(item.classList !== 'active') {
+					item.classList.add('active')
+				}
+			})
+		})
+	}
+}
 
 // Currency Switcher Mobile End -----------------------------------------------------------------------------------------
 
@@ -88,51 +91,67 @@ menuBtn.addEventListener('click', event => {
 	}
 })
 
-closeBtn.addEventListener('click', event => {
+menuCloseBtn.addEventListener('click', event => {
 	navVertical.style.display = 'none'	
 })
 
 // Mobile Menu End -----------------------------------------------------------------------------------------
 
 // Dropdown Menu item -----------------------------------------------------------------------------------------
-programsItem.addEventListener('click', event => {
-	if(getComputedStyle(programsList).display == 'none') {
-		programsList.style.display = 'block'
+const navHorizontalDropDown = document.querySelector('.nav-horizontal .drop-down')
+const navVerticalDropDown = document.querySelector('.nav-vertical .drop-down')
+const navHorizontalDropDownItems = document.querySelector('.nav-horizontal .drop-down-list')
+const navVerticalDropDownItems = document.querySelector('.nav-vertical .drop-down-list')
+
+
+navHorizontalDropDown.onclick = () => {
+	if(getComputedStyle(navHorizontalDropDownItems).display == 'none') {
+		navHorizontalDropDownItems.style.display = 'block'
 	} else {
-		programsList.style.display = 'none'
+		navHorizontalDropDownItems.style.display = 'none'
 	}	
-})
+}
+
+navVerticalDropDown.onclick = () => {
+	if(getComputedStyle(navVerticalDropDownItems).display == 'none') {
+		navVerticalDropDownItems.style.display = 'block'
+	} else {
+		navVerticalDropDownItems.style.display = 'none'
+	}	
+}
 
 // Dropdown Menu item End --------------------------------------------------------------------------
 
 // Facts Slider ------------------------------------------------------------------------------------
-let screenWidth = screen.width;
+if(slider) {
+	let screenWidth = screen.width;
 
-let slide = 0
+	let slide = 0
 
-if(screenWidth < 960) {
-	let slidesCount = slider.children.length - 1
-	let slideWidth = 100 / (slidesCount + 1)
+	if(screenWidth < 960) {
+		let slidesCount = slider.children.length - 1
+		let slideWidth = 100 / (slidesCount + 1)
 
-	slider.style.width = (slidesCount + 1) * 100 + '%'
+		slider.style.width = (slidesCount + 1) * 100 + '%'
 
-	function moveSlide() {
-	    slider.style.transform = 'translate(' + slide * -slideWidth + '%)'
+		function moveSlide() {
+		    slider.style.transform = 'translate(' + slide * -slideWidth + '%)'
+		}
+
+		rightArrow.onclick = () => {
+		    slide = (slide < slidesCount) ? slide + 1 : 0
+		    moveSlide()
+		}
+
+		leftArrow.onclick = () => {
+		    slide = (slide > 0) ? slide - 1 : slidesCount
+		    moveSlide()
+		}
+
+	} else {
+		leftArrow.style.display = "none"
+		rightArrow.style.display = "none"
 	}
-
-	rightArrow.onclick = () => {
-	    slide = (slide < slidesCount) ? slide + 1 : 0
-	    moveSlide()
-	}
-
-	leftArrow.onclick = () => {
-	    slide = (slide > 0) ? slide - 1 : slidesCount
-	    moveSlide()
-	}
-
-} else {
-	leftArrow.style.display = "none"
-	rightArrow.style.display = "none"
 }
 // Facts Slider End ------------------------------------------------------------------------------------
 
@@ -185,15 +204,38 @@ function moveColumn() {
 	}
 }
 
-let tableColumnIndex = 0
-tableArrowRight.onclick = () => {
- 	tableColumnIndex = (tableColumnIndex < 2) ? tableColumnIndex + 1 : 0
-    moveColumn()
-}
+if(document.querySelector('.table-carousel')) {
+	let tableColumnIndex = 0
+	tableArrowRight.onclick = () => {
+	 	tableColumnIndex = (tableColumnIndex < 2) ? tableColumnIndex + 1 : 0
+	    moveColumn()
+	}
 
-tableArrowLeft.onclick = () => {
-	tableColumnIndex = (tableColumnIndex > 0) ? tableColumnIndex - 1 : 2
-	moveColumn()
+	tableArrowLeft.onclick = () => {
+		tableColumnIndex = (tableColumnIndex > 0) ? tableColumnIndex - 1 : 2
+		moveColumn()
+	}
 }
 // Table Column Slider  End ----------------------------------------------------------------------------------
 
+// Popup Form -------------------------------------------//
+const popup = document.querySelector('.popup-form-wrapper')
+if(popup) {
+	const popupCloseBtn = popup.querySelector('.close-btn')	
+	const popupBtn = document.querySelector('.popup-btn')
+	let screenHeight = screen.height
+	window.onload = () => {
+		popup.style.top = -screenHeight + 'px'
+	}
+
+	popupBtn.onclick = () => {
+		popup.style.display = 'flex'
+		popup.style.top = screenHeight / 4 + 'px'
+	}
+
+	popupCloseBtn.addEventListener('click', event => {
+		popup.style.top = -screenHeight + 'px'	
+	})
+}
+
+// Popup Form End -------------------------------------------//

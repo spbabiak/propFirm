@@ -135,6 +135,9 @@ body {
 	line-height: 1.5;
 	letter-spacing: 0.12px; 
 	min-height: 100vh;
+	position: relative;
+	top: 0;
+	left: 0;
 }
 
 input, 
@@ -334,14 +337,30 @@ li > ul {
   border-right: 5px solid transparent;
   border-top: 5px solid #fff;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-left: 5px;
+  top: 15px;
+  margin-left: 8px;
   z-index: 1;
 }
 
-.programs-list {
+.nav-horizontal .drop-down { 
+	position: relative; 
+	display: inline-block;
+	padding-bottom: 25px;
+}
+
+.nav-horizontal ul li ul.drop-down-list {
 	display: none;
+	width: 340px;
+	position: absolute;
+  top: 50px;
+  left: 0;
+  margin-left: 0;
+}
+
+.drop-down:hover .drop-down-list { display: block; }
+
+.nav-horizontal .drop-down-list li {
+	margin-bottom: 15px;
 }
 
 .login-lang-wrapper {
@@ -856,7 +875,7 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 }
 
 .hero-content {
-	padding: 180px 0 340px 0; 
+	padding: 240px 0 240px 0; 
 	max-width: 810px;
 }
 
@@ -1065,6 +1084,40 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 	margin-top: 35px;
 }
 
+.popup-form-wrapper {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
+	width: 90%;
+	max-width: 450px;
+	background-color: #fff;	
+	align-items: center;
+	justify-content: center;
+	display: none;
+	transition: all .3s;
+}
+
+.popup-form-wrapper .close-btn,
+.popup-form-wrapper .close-btn::before {
+	background-color: #e2eeee;
+	height: 3px;
+}
+
+.popup-form-wrapper .close-btn { right: 11px; }
+
+.popup-form {
+	padding: 100px 30px 60px 30px;	
+	max-width: 420px;
+}
+
+.popup-form input {
+	max-width: 420px;
+}
+
+.popup-form label:nth-child(4) input { margin-bottom: 30px; }
+.popup-form button { margin-inline: auto; }
+
 .main-form {
 	padding: 30px 20px 40px 20px;
 }
@@ -1083,6 +1136,26 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 	border-bottom-right-radius: 10px;
 }
 
+/* Forex page ------------------------------------------------------------------------------------- */
+.page-hero-section { background-color: #0d2340; }
+.page-hero-content { padding: 135px 0 35px 0; }
+.page-hero-content .hero-title { font-size: 30px; }
+.page-section { padding-top: 50px !important; }
+.page-section h2:not(:first-child) { margin-top: 60px; }
+
+.icons .step {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.step-text { max-width: 360px; }
+.instructions-section .section-content {
+    margin-bottom: 35px;
+}
+.instructions-section .cta-wrapper { margin-inline: auto; max-width: 250px;}
+.instructions-section .cta-wrapper > a { margin: 0; }
 
 /* Media queries */
 @media screen and (min-width: 340px) {
@@ -1161,8 +1234,9 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
   	margin-left: 12px;
   }
 
+
   .facts-slider .slide {
-    align-items: flex-start;
+  	align-items: flex-start;
     text-align: left;
  	}
 
@@ -1252,7 +1326,6 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 		flex-basis: 47%;
 	}
 		
-	.benefits-section h2 { text-align: left; }
 	.why-us-section h2 { text-align: center; }
 	.section-content { margin-top: 60px; }
 	section:nth-child(5) .section-content { margin-top: 50px; margin-bottom: 60px;}
@@ -1298,6 +1371,18 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
   .switcher-controls li {
     font-size: 22px;
   }
+
+  /* Forex page --------------------------------- */
+  .page-section { padding-top: 100px !important; }
+  .page-hero-section { padding: 200px 0 100px 0; }
+  .page-hero-content .hero-title { font-size: 100px; }
+  .icons .step { 
+  	flex-basis: 25%; 
+  	margin-bottom: 0;
+  }
+
+  .instructions-section .section-content { margin-top: 100px; }
+
 }
 
 @media screen and (min-width: 1280px) {
@@ -1371,6 +1456,7 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 		display: block; 
 		width: 100%;
 		max-width: 592px; 
+		padding-top: 25px;
 	}
 
 	.nav-horizontal ul {
@@ -1382,14 +1468,13 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 		position: relative;
 		top: 0;
 		left: 0;
-		margin-bottom: 15px;
 	}
 
 	.nav-horizontal ul li ul {
 		position: absolute;
     top: 50px;
     left: -50px;
-    width: 120px;
+    width: 340px;
 	}
 
 	.menu-btn-wrapper { display: none; }

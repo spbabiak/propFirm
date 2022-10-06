@@ -10,6 +10,32 @@
 	<title>Prop Firm</title>
 </head>
 <body>
+	<div class="popup-form-wrapper border-radius-10">
+		<div class="close-btn"></div>
+		<form id="popup-form" class="popup-form" action="" method="post">
+			<label>
+				<input id="POST-fullname" type="text" name="name" placeholder="Full name">
+				<span class="error_name" aria-live="polite"></span>
+			</label>
+	
+			<label>
+				<input id="POST-email" type="email" name="email" placeholder="Email">
+				<span class="error_email" aria-live="polite"></span>
+			</label>
+		
+			<label>
+				<input id="POST-phone" type="tel" name="phone" placeholder="Phone number">
+				<span class="error_phone" aria-live="polite"></span>
+			</label>
+
+			<label>
+				<input id="POST-country" type="text" name="country" placeholder="Country of residence">
+				<span class="country" aria-live="polite"></span>
+			</label>
+		
+		 	<button class="btn border-radius-10 accent-bg-1 dark-text ff-bold" type="submit">Open demo</button>
+  		</form>
+	</div>
 	<header class="main-header">
 		<!-- TradingView Widget BEGIN -->
 		<div class="tradingview-widget-container">
@@ -50,42 +76,42 @@
 		<!-- TradingView Widget END -->
 		<div class="wrapper flex">
 			<div class="wrapper-logo flex" style="flex-grow: 1;">
-				<a href="#">
+				<a href="index.html">
 					<div class="logo-mark" style="width: 51px; height: 58px;"><img src="./imgs/logo_mark.png" alt="Circle with three lines"></div>
 				</a>
 				<div class="light-text logo-text"><span class="ff-bold"><a href="#">Prop</span> Firm</a></div>	
 			</div>
 			<nav class="nav-horizontal">
 				<ul class="flex light-text">
-					<li><a href="#"><a href="#">Home</a></li>
-					<li>
-						<div class="programs position-relative drop-down"><a href="#">Markets</a></div>
-						<ul class="programs-list">
-							<li><a href="#">Market 1</a></li>
-							<li><a href="#">Market 2</a></li>
-							<li><a href="#">Market 3</a></li>
+					<li><a href="index.html">Home</a></li>
+					<li class="position-relative drop-down">
+						<a href="#">Markets</a>
+						<ul class="drop-down-list">
+							<li><a href="forex.html">Forex</a></li>
+							<li><a href="commodities_and_indices.html">Commodities and Indices</a></li>
+							<li><a href="cryptocurrencies.html">Cryptocurrencies</a></li>
 						</ul>
 					</li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Partners </a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="partners.html">Partners </a></li>
+					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
 			<nav class="nav-vertical">
 				<div class="close-btn"></div>
 				<ul class="light-text">
-					<li><a href="#">Home</a></li>
+					<li><a href="index.html">Home</a></li>
 					<li>
-						<div class="programs position-relative drop-down"><a href="#">Markets</a></div>
-						<ul class="programs-list">
-							<li><a href="#">Market 1</a></li>
-							<li><a href="#">Market 2</a></li>
-							<li><a href="#">Market 3</a></li>
+						<div class="position-relative drop-down"><a href="#">Markets</a></div>
+						<ul class="drop-down-list">
+							<li><a href="forex.html">Forex</a></li>
+							<li><a href="commodities_and_indices.html">Commodities and Indices</a></li>
+							<li><a href="cryptocurrencies.html">Cryptocurrencies</a></li>
 						</ul>
 					</li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Partners</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="partners.html">Partners</a></li>
+					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
 			<div class="flex" style="align-items: center;">
@@ -113,7 +139,7 @@
 Deposit in Crypto and Receive an Instant Bonus *</p>
 				<div class="cta-wrapper flex flex-wrap">
 					<a href="#" class="btn border-radius-10 accent-bg-1 dark-text ff-bold">Trade Now!</a>
-					<a href="#" class="btn border border-radius-10 accent-text ff-bold">Open Demo</a>
+					<a href="#" class="btn popup-btn border border-radius-10 accent-text ff-bold">Open Demo</a>
 				</div>
 			</div>
 		</div>
@@ -122,19 +148,19 @@ Deposit in Crypto and Receive an Instant Bonus *</p>
 				<div class="facts-slider">
 					<div class="slide">
 						<span class="accent-text ff-secondary ff-bold" style="font-size: 50px;">0.1</span>
-						<span class="light-text"><span class="break-line">Industry Low Spreads</span>
+						<span class="light-text"><span class="break-line"><span class="break-line">Industry Low</span> Spreads</span>
 					</div>
 					<div class="slide">
 						<span class="accent-text ff-secondary ff-bold" style="font-size: 50px;">1000:1</span>
-						<span class="light-text"><span class="break-line">Maximum Market Leverage </span>
+						<span class="light-text"><span class="break-line">Maximum Market</span> Leverage </span>
 					</div>
 					<div class="slide">
 						<span class="accent-text ff-secondary ff-bold" style="font-size: 50px;">0.01</span>
-						<span class="light-text">Microlots Available</span>
+						<span class="light-text"><span class="break-line">Microlots</span> Available</span>
 					</div>
 					<div class="slide">
 						<span class="accent-text ff-secondary ff-bold" style="font-size: 50px;">4 Hours</span>
-						<span class="light-text">Fast Withdrawals Processing</span>
+						<span class="light-text"><span class="break-line">Fast Withdrawals</span> Processing</span>
 					</div>
 				</div>
 				<div class="controls">
