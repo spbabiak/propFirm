@@ -646,10 +646,6 @@ li > ul {
 	margin-top: 18px;
 }
 
-.nav-section-wrapper .nav-section:first-child {
-	margin-right: 46px;
-}
-
 footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 
 .footer-top {
@@ -1333,7 +1329,6 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
  	}
 
  	footer .nav-section { font-size: 22px; }
- 	.nav-section-wrapper { row-gap: 40px; justify-content: unset;}
  	footer .nav-section li:not(:last-child) { margin-bottom: 25px; }
  	.footer-top { 
 	 	align-items: unset;
