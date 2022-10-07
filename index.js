@@ -6,6 +6,7 @@
 // Testimonials Slider ----------------------------------//
 // Table Column Slider ----------------------------------//
 // Popup Form -------------------------------------------//
+// Popup Form 2 -----------------------------------------//
 
 
 const menuBtn = document.querySelector('.menu-btn-wrapper')
@@ -191,6 +192,7 @@ const tableArrowLeft = document.querySelector('.table-carousel .left')
 const tableArrowRight = document.querySelector('.table-carousel .right')
 const tableCell = document.querySelectorAll('.table-row .slide')
 const tabelColumnLabel = document.querySelector('.label-wrapper')
+let tableColumnIndex = 0
 
 function moveColumn() {
 	tableCell.forEach(item => {
@@ -205,7 +207,6 @@ function moveColumn() {
 }
 
 if(document.querySelector('.table-carousel')) {
-	let tableColumnIndex = 0
 	tableArrowRight.onclick = () => {
 	 	tableColumnIndex = (tableColumnIndex < 2) ? tableColumnIndex + 1 : 0
 	    moveColumn()
@@ -220,10 +221,11 @@ if(document.querySelector('.table-carousel')) {
 
 // Popup Form -------------------------------------------//
 const popup = document.querySelector('.popup-form-wrapper')
+let screenHeight = screen.height
+
 if(popup) {
 	const popupCloseBtn = popup.querySelector('.close-btn')	
 	const popupBtn = document.querySelector('.popup-btn')
-	let screenHeight = screen.height
 	window.onload = () => {
 		popup.style.top = -screenHeight + 'px'
 	}
@@ -234,8 +236,52 @@ if(popup) {
 	}
 
 	popupCloseBtn.addEventListener('click', event => {
-		popup.style.top = -screenHeight + 'px'	
+		popup.style.top = -screenHeight - (screenHeight / 4) + 'px'	
 	})
 }
 
 // Popup Form End -------------------------------------------//
+
+// Popup Form 2 -----------------------------------------//
+const popupRegistration = document.querySelector('.popup-form-wrapper-2')
+const popupRegBtn = document.querySelectorAll('.popup-reg-btn')
+const popupRegBtnArray = Array.from(popupRegBtn)
+
+if(popupRegistration) {
+	const popupRegCloseBtn = popupRegistration.querySelector('.close-btn')	
+	const birthYear = document.getElementById('POST-birth-y') 
+	const birthMonth = document.getElementById('POST-birth-m') 
+	const birthDay = document.getElementById('POST-birth-d') 
+
+	for(let y = 2022; y >= 1900; y--) {
+		let optionElement = document.createElement("option")
+		let textNode = document.createTextNode(y)
+		optionElement.setAttribute('value', y)
+		optionElement.appendChild(textNode)
+		birthYear.appendChild(optionElement)
+	}
+
+	for(let d = 1; d <= 31; d++) {
+		let optionElement = document.createElement("option")
+		let textNode = document.createTextNode(d)
+		optionElement.setAttribute('value', d)
+		optionElement.appendChild(textNode)
+		birthDay.appendChild(optionElement)
+	}
+
+	window.onload = () => {
+		popupRegistration.style.top = -screenHeight + 'px'
+	}
+
+	popupRegBtn.forEach(item => {
+		item.onclick = () => {
+			popupRegistration.style.display = 'block'
+			popupRegistration.style.top = screenHeight / 4 + window.scrollY + 'px'
+		}
+	})
+
+	popupRegCloseBtn.addEventListener('click', event => {
+		popupRegistration.style.top = -screenHeight - (screenHeight / 4) - window.scrollY + 'px'	
+	})
+}
+// Popup Form 2 End -----------------------------------------//

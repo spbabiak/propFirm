@@ -1096,6 +1096,7 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 	justify-content: center;
 	display: none;
 	transition: all .3s;
+  box-shadow: #e9f8f8 -5px 6px 10px, #e9f8f8 5px -6px 10px;
 }
 
 .popup-form-wrapper .close-btn,
@@ -1104,15 +1105,48 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 	height: 3px;
 }
 
+.popup-form-wrapper-2 {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2;
+	width: 90%;
+	max-width: 450px;
+	background-color: #fff;	
+	align-items: center;
+	justify-content: center;
+	display: none;
+	transition: all .3s;
+  box-shadow: #e9f8f8 -5px 6px 10px, #e9f8f8 5px -6px 10px;
+}
+
+.popup-form-wrapper-2 .close-btn,
+.popup-form-wrapper-2 .close-btn::before {
+	background-color: #e2eeee;
+	height: 3px;
+}
+
 .popup-form-wrapper .close-btn { right: 11px; }
 
 .popup-form {
-	padding: 100px 30px 60px 30px;	
+	padding: 50px 30px 60px 30px;	
+	max-width: 420px;
+	margin-inline: auto;
+}
+
+.popup-form input,
+.popup-form select {
 	max-width: 420px;
 }
 
-.popup-form input {
-	max-width: 420px;
+#POST-birth-y,
+#POST-birth-m,
+#POST-birth-d {
+	flex-basis: 30%;
+}
+
+.form-header {
+	padding: 0px 30px 0px 30px;
 }
 
 .popup-form label:nth-child(4) input { margin-bottom: 30px; }
