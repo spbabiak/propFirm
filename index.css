@@ -1171,7 +1171,7 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 }
 
 /* Forex page ------------------------------------------------------------------------------------- */
-.page-hero-section { background-color: #0d2340; }
+.page-hero-section { background-color: #0d2340; padding-top: 100px;}
 .page-hero-content { padding: 135px 0 35px 0; }
 .page-hero-content .hero-title { font-size: 30px; }
 .page-section { padding-top: 50px !important; }
