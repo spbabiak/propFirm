@@ -1113,7 +1113,7 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 	justify-content: center;
 	display: none;
 	transition: all .3s;
-  box-shadow: #e9f8f8 -5px 6px 10px, #e9f8f8 5px -6px 10px;
+  box-shadow: #6d6d6d14 -5px 6px 10px, #6d6d6d14 5px -6px 10px;
 }
 
 .popup-form-wrapper-2 .close-btn,
@@ -1154,7 +1154,7 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 
 .form-wrapper {
 	background-color: #fff;
-	box-shadow: #e9f8f8 -5px 6px 10px, #e9f8f8 5px -6px 10px;
+	box-shadow: #6d6d6d14 -5px 6px 10px, #6d6d6d14 5px -6px 10px;
 	width: 280px;
 	margin-inline: auto;
 }

@@ -245,7 +245,6 @@ if(popup) {
 // Popup Form 2 -----------------------------------------//
 const popupRegistration = document.querySelector('.popup-form-wrapper-2')
 const popupRegBtn = document.querySelectorAll('.popup-reg-btn')
-const popupRegBtnArray = Array.from(popupRegBtn)
 
 if(popupRegistration) {
 	const popupRegCloseBtn = popupRegistration.querySelector('.close-btn')	

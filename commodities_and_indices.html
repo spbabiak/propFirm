@@ -10,6 +10,92 @@
 	<title>Prop Firm</title>
 </head>
 <body>
+	<div class="popup-form-wrapper-2 border-radius-10">
+		<div class="close-btn"></div>
+		<div class="form-header">
+			<h3>Registration details</h3>
+			<p>1. Please complete the following form using Latin characters.</p>
+			<p>2. Estimated time to complete your registration is 1 minute.</p>	
+		</div>
+		<form id="popup-form" class="popup-form" action="" method="post">
+			<label>
+				<select id="POST-clientType" name="POST-clientType">
+				    <option value="0" selected>I want to register as</option>
+				    <option value="individual">Individual Client</option>
+				    <option value="corporate">Corporate Client</option>
+				</select>
+				<span class="error_client_type" aria-live="polite"></span>
+			</label>
+			<label>
+				<select id="POST-title" name="POST-title">
+				    <option value="0" selected>Title</option>
+				    <option value="mr">Mr</option>
+				    <option value="mrs">Mrs</option>
+				    <option value="ms">Ms</option>
+				</select>
+				<span class="error_title" aria-live="polite"></span>
+			</label>
+			
+			<label>
+				<input id="POST-fullname" type="text" name="name" placeholder="Full name">
+				<span class="error_name" aria-live="polite"></span>
+			</label>
+			
+			<label class="flex" style="justify-content: space-between;">
+				<select id="POST-birth-y" name="POST-birth-y">
+				    <option value="0" selected>Birth Year</option>
+				</select>
+				<span class="error_birth_y" aria-live="polite"></span>
+				<select id="POST-birth-m" name="POST-birth-m">
+				    <option value="0" selected>Month</option>
+				    <option value="1">Jan</option>
+				    <option value="2">Feb</option>
+				    <option value="3">Mar</option>
+				    <option value="4">Apr</option>
+				    <option value="5">May</option>
+				    <option value="6">Jun</option>
+				    <option value="7">Jul</option>
+				    <option value="8">Aug</option>
+				    <option value="9">Sept</option>
+				    <option value="10">Oct</option>
+				    <option value="11">Nov</option>
+				    <option value="12">Dec</option>
+				</select>
+				<span class="error_birth_m" aria-live="polite"></span>
+				<select id="POST-birth-d" name="POST-birth-d">
+				    <option value="0" selected>Day</option>
+				</select>
+				<span class="error_birth_d" aria-live="polite"></span>
+			</label>
+
+			<label>
+				<input id="POST-email" type="email" name="email" placeholder="Email">
+				<span class="error_email" aria-live="polite"></span>
+			</label>
+		
+			<label>
+				<input id="POST-phone" type="tel" name="phone" placeholder="Phone number">
+				<span class="error_phone" aria-live="polite"></span>
+			</label>
+
+			<label>
+				<input id="POST-country" type="text" name="country" placeholder="Country of residence">
+				<span class="country" aria-live="polite"></span>
+			</label>
+
+			<label>
+				<input id="POST-password" type="text" name="password" placeholder="Password">
+				<span class="password" aria-live="polite"></span>
+			</label>
+
+			<label>
+				<input id="POST-passwordRepeat" type="text" name="password-repeat" placeholder="Repeat password">
+				<span class="password-repeat" aria-live="polite"></span>
+			</label>
+
+		 	<button class="btn border-radius-10 accent-bg-1 dark-text ff-bold" type="submit">Continue</button>
+  		</form>
+	</div>
 	<header class="main-header">
 		<div class="wrapper flex">
 			<div class="wrapper-logo" style="flex-grow: 1;">
@@ -123,7 +209,7 @@
 				</div>
 			</div>
 			<div class="cta-wrapper flex">
-				<a href="#" class="btn border-radius-10 accent-bg-1 dark-text ff-bold">Start Trading</a>
+				<a class="btn popup-reg-btn border-radius-10 accent-bg-1 dark-text ff-bold">Start Trading</a>
 			</div>
 		</div>
 	</section>
