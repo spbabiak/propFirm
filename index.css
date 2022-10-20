@@ -140,6 +140,12 @@ body {
 	left: 0;
 }
 
+label {
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
 input, 
 select,
 textarea {
@@ -181,12 +187,52 @@ button {
 	color: #b1c8c8;	
 }
 
+.error-color::placeholder { color: red; }
+
 select{
   color: #b1c8c8;
   background-color: transparent;
 }
 
 select option { color: #024059; }
+
+.error_name,
+.error_surname,
+.error_email,
+.error_phone,
+.error_country,
+.error_platform,
+.error_subject,
+.error_client_type,
+.error_title,
+.error_password,
+.error_pass_repeat {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 300px;
+  font-size: 14px;
+  color: red;
+}
+
+.error_password { color: #aeaeae; }
+
+.error_name,
+.error_surname,
+.error_email,
+.error_phone,
+.error_country,
+.error_platform,
+.error_client_type,
+.error_title,
+.error_password,
+.error_pass_repeat {
+	  top: 30px;
+}
+
+.error_subject { top: 10px; }
+
+.password { margin-bottom: 110px; }
 
 section {
 	position: relative;
@@ -1080,7 +1126,8 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 	margin-top: 35px;
 }
 
-.popup-form-wrapper {
+.demo-popup-form-wrapper,
+.reg-popup-form-wrapper {
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
@@ -1092,37 +1139,18 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 	justify-content: center;
 	display: none;
 	transition: all .3s;
-  box-shadow: #e9f8f8 -5px 6px 10px, #e9f8f8 5px -6px 10px;
+	box-shadow: #6d6d6d14 -5px 6px 10px, #6d6d6d14 5px -6px 10px;
 }
 
-.popup-form-wrapper .close-btn,
-.popup-form-wrapper .close-btn::before {
+.demo-popup-form-wrapper .close-btn,
+.demo-popup-form-wrapper .close-btn::before,
+.reg-popup-form-wrapper .close-btn,
+.reg-popup-form-wrapper .close-btn::before {
 	background-color: #e2eeee;
 	height: 3px;
 }
 
-.popup-form-wrapper-2 {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 2;
-	width: 90%;
-	max-width: 450px;
-	background-color: #fff;	
-	align-items: center;
-	justify-content: center;
-	display: none;
-	transition: all .3s;
-  box-shadow: #6d6d6d14 -5px 6px 10px, #6d6d6d14 5px -6px 10px;
-}
-
-.popup-form-wrapper-2 .close-btn,
-.popup-form-wrapper-2 .close-btn::before {
-	background-color: #e2eeee;
-	height: 3px;
-}
-
-.popup-form-wrapper .close-btn { right: 11px; }
+.demo-popup-form-wrapper .close-btn { right: 11px; }
 
 .popup-form {
 	padding: 50px 30px 60px 30px;	

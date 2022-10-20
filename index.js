@@ -1,12 +1,16 @@
-// Dropdown Menu Item -----------------------------------//
-// Mobile Menu ------------------------------------------//
-// Currency Switcher Mobile -----------------------------//
-// Switcher Controls ------------------------------------//
-// Facts Slider -----------------------------------------//
-// Testimonials Slider ----------------------------------//
-// Table Column Slider ----------------------------------//
-// Popup Form -------------------------------------------//
-// Popup Form 2 -----------------------------------------//
+// Dropdown Menu Item ----------------------------------------------//
+// Mobile Menu -----------------------------------------------------//
+// Currency Switcher Mobile ----------------------------------------//
+// Switcher Controls -----------------------------------------------//
+// Facts Slider ----------------------------------------------------//
+// Testimonials Slider ---------------------------------------------//
+// Table Column Slider ---------------------------------------------//
+// Show Open Demo Popup Form ---------------------------------------//
+// Show Registration Popup Form ------------------------------------//
+// Form Submission -------------------------------------------------//
+// - Contact Form --------------------------------------------------//
+// - Registration Form ---------------------------------------------//
+// - Open Demo Form ------------------------------------------------//
 
 
 const menuBtn = document.querySelector('.menu-btn-wrapper')
@@ -219,8 +223,8 @@ if(document.querySelector('.table-carousel')) {
 }
 // Table Column Slider  End ----------------------------------------------------------------------------------
 
-// Popup Form -------------------------------------------//
-const popup = document.querySelector('.popup-form-wrapper')
+// Show Open Demo Popup Form -------------------------------------------//
+const popup = document.querySelector('.demo-popup-form-wrapper')
 let screenHeight = screen.height
 
 if(popup) {
@@ -231,7 +235,7 @@ if(popup) {
 	}
 
 	popupBtn.onclick = () => {
-		popup.style.display = 'flex'
+		popup.style.display = 'block'
 		popup.style.top = screenHeight / 4 + 'px'
 	}
 
@@ -240,10 +244,10 @@ if(popup) {
 	})
 }
 
-// Popup Form End -------------------------------------------//
+// Show Open Demo Popup Form End -------------------------------------------//
 
-// Popup Form 2 -----------------------------------------//
-const popupRegistration = document.querySelector('.popup-form-wrapper-2')
+// Show Registration Popup Form -----------------------------------------//
+const popupRegistration = document.querySelector('.reg-popup-form-wrapper')
 const popupRegBtn = document.querySelectorAll('.popup-reg-btn')
 
 if(popupRegistration) {
@@ -252,7 +256,7 @@ if(popupRegistration) {
 	const birthMonth = document.getElementById('POST-birth-m') 
 	const birthDay = document.getElementById('POST-birth-d') 
 
-	for(let y = 2022; y >= 1900; y--) {
+	for(let y = new Date().getFullYear(); y >= 1900; y--) {
 		let optionElement = document.createElement("option")
 		let textNode = document.createTextNode(y)
 		optionElement.setAttribute('value', y)
@@ -283,4 +287,447 @@ if(popupRegistration) {
 		popupRegistration.style.top = -screenHeight - (screenHeight / 4) - window.scrollY + 'px'	
 	})
 }
-// Popup Form 2 End -----------------------------------------//
+// Show Registration Popup Form End -----------------------------------------//
+
+/* Form Submission -------------------------------------------------------------------------------------------------------------------------------*/
+
+// Contact Form ---------------------------------------------------------------//
+const contactForm = document.getElementById('contact-form')
+if(contactForm) {
+	// Form elements for error display
+	const errorName = contactForm.querySelector('.error_name')
+	const errorSurname = contactForm.querySelector('.error_surname')
+	const errorEmail = contactForm.querySelector('.error_email')
+	const errorPhone = contactForm.querySelector('.error_phone')
+	const errorCountry = contactForm.querySelector('.error_country')
+	const errorPlatform = contactForm.querySelector('.error_platform')
+	const errorSubject = contactForm.querySelector('.error_subject')
+
+	function isValidPhonenumber(value) {
+    	return (/^\d{7,}$/).test(value.replace(/[\s()+\-\.]|ext/gi, ''))
+	}
+
+	function sendData() {
+	    const XHR = new XMLHttpRequest()
+
+	    // Bind the FormData object and the form element
+	    const FD = new FormData(contactForm)
+
+	    var name = FD.get('name')
+	    var surname = FD.get('surname')
+	    var email = FD.get('email')
+	    var phone = FD.get('phone')
+	    var country = FD.get('country')
+	    var platform = FD.get('POST-platform')
+	    var subject = FD.get('POST-subject')
+
+	    // Define what happens on successful data submission
+	    XHR.addEventListener( "load", function(event) {
+	      alert( event.target.responseText )
+		})
+
+	    // Define what happens in case of error
+	    XHR.addEventListener( "error", function( event ) {
+	      alert( 'Oops! Something went wrong.' )
+	    })
+
+		// Form data validation
+	    var errorCounter = 0
+		var nameFormat = /^[A-Za-z\s]*$/
+		var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+		var countryNameFormat = /^[A-Za-z\s]*$/
+
+		if((name == '') || (name.length < 3)) {
+			++errorCounter
+			errorName.innerHTML = 'This field is required'
+			errorName.previousElementSibling.style.marginBottom = '40px'
+		} else if(name.match(nameFormat)) {
+			errorName.style.color = 'green'
+			errorName.innerHTML = '✓ Valid'
+		} else {
+			++errorCounter
+			errorName.innerHTML = 'Only letters and spaces allowed'
+			errorName.previousElementSibling.style.marginBottom = '40px'
+		}
+
+		if((surname == '') || (surname.length < 3)) {
+			++errorCounter
+			errorSurname.innerHTML = 'This field is required'
+			errorSurname.previousElementSibling.style.marginBottom = '40px'
+		} else if(surname.match(nameFormat)) {
+			errorSurname.style.color = 'green'
+			errorSurname.innerHTML = '✓ Valid'
+		}	else {
+			++errorCounter
+			errorSurname.innerHTML = 'Only letters and spaces allowed'
+			errorSurname.previousElementSibling.style.marginBottom = '40px'
+		}
+
+		if(email == '') {
+			++errorCounter
+			errorEmail.innerHTML = 'This field is required'
+			errorEmail.previousElementSibling.style.marginBottom = '40px'
+		} else if(email.match(mailFormat)) {
+			errorEmail.style.color = 'green'
+			errorEmail.innerHTML = '✓ Valid'
+		} else {
+			++errorCounter
+			errorEmail.innerHTML = 'Invalid email format'
+			errorEmail.previousElementSibling.style.marginBottom = '40px'	
+		}
+
+		if(phone == '') {
+			++errorCounter
+			errorPhone.innerHTML = 'This field is required'
+			errorPhone.previousElementSibling.style.marginBottom = '40px'
+		} else if(isValidPhonenumber(phone)) {
+			errorPhone.style.color = 'green'
+			errorPhone.innerHTML = '✓ Valid'
+		} else {
+			++errorCounter
+			errorPhone.innerHTML = 'Invalid phone format'
+			errorPhone.previousElementSibling.style.marginBottom = '40px'
+		}
+
+		if((country == '') || (country.length < 3)) {
+			++errorCounter
+			errorCountry.innerHTML = 'This field is required'
+			errorCountry.previousElementSibling.style.marginBottom = '40px'
+		} else if(country.match(countryNameFormat)) {
+			errorCountry.style.color = 'green'
+			errorCountry.innerHTML = '✓ Valid'
+		} else {
+			++errorCounter
+			errorCountry.innerHTML = 'Invalid country name format'
+			errorCountry.previousElementSibling.style.marginBottom = '40px'
+		}
+
+		if(platform == 0) {
+			++errorCounter
+			errorPlatform.innerHTML = 'Choose platform'
+			errorPlatform.previousElementSibling.style.marginBottom = '40px'
+		} else {
+			errorPlatform.style.color = 'green'
+			errorPlatform.innerHTML = '✓ Valid'
+		}
+
+		if(subject == '') {
+			++errorCounter
+			errorSubject.innerHTML = 'Tell us your message'
+		} else {
+			errorSubject.style.color = 'green'
+			errorSubject.innerHTML = '✓ Valid'
+		}
+
+	    if(errorCounter == 0) {
+	    	// Set up our request
+	    	// XHR.open("POST", "FormDataHandler.php")
+
+		    // The data sent is what the user provided in the form
+		    XHR.send(FD)
+	    }
+	}
+
+	contactForm.addEventListener('submit', event => {
+		event.preventDefault()
+		sendData()
+	});
+}
+
+// Contact Form End -------------------------------------------------------------------//
+
+// Registration Form ------------------------------------------------------------------//
+const regForm = document.getElementById('registration-form')
+if(regForm) {
+	// Form elements for error display
+	const errorClientType = regForm.querySelector('.error_client_type')
+	const errorClientTitle = regForm.querySelector('.error_title')
+	const errorName = regForm.querySelector('.error_name')
+	const errorBirthYear = regForm.querySelector('.error_birth_y')
+	const errorBirthMonth = regForm.querySelector('.error_birth_m')
+	const errorBirthDay = regForm.querySelector('.error_birth_d')
+	const errorEmail = regForm.querySelector('.error_email')
+	const errorPhone = regForm.querySelector('.error_phone')
+	const errorCountry = regForm.querySelector('.error_country')
+	const errorPassword = regForm.querySelector('.error_password')
+	const errorRepeatPass = regForm.querySelector('.error_pass_repeat')
+
+	function isValidPhonenumber(value) {
+    	return (/^\d{7,}$/).test(value.replace(/[\s()+\-\.]|ext/gi, ''))
+	}
+
+	function sendData() {
+	    const XHR = new XMLHttpRequest()
+
+	    // Bind the FormData object and the form element
+	    const FD = new FormData(regForm)
+
+	    var clientType = FD.get('POST-clientType')
+	    var clientTitle = FD.get('POST-title')
+	    var name = FD.get('name')
+	    var birthYear = FD.get('POST-birth-y')
+	    var birthMonth = FD.get('POST-birth-m')
+	    var birthDay = FD.get('POST-birth-d')
+	    var email = FD.get('email')
+	    var phone = FD.get('phone')
+	    var country = FD.get('country')
+	    var password = FD.get('password')
+	    var passRepeat = FD.get('password-repeat')
+
+	    // Define what happens on successful data submission
+	    XHR.addEventListener( "load", function(event) {
+	      alert( event.target.responseText )
+		})
+
+	    // Define what happens in case of error
+	    XHR.addEventListener( "error", function( event ) {
+	      alert( 'Oops! Something went wrong.' )
+	    })
+
+	    // Form data validation
+	    var errorCounter = 0
+		var nameFormat = /^[A-Za-z\s]*$/
+		var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+		var countryNameFormat = /^[A-Za-z\s]*$/
+		var passwordFormat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/
+
+		if(clientType == 0) {
+			++errorCounter
+			errorClientType.previousElementSibling.style.color = 'red'
+		} else {
+			errorClientType.previousElementSibling.style.color = '#024059'
+		}
+
+		if(clientTitle == 0) {
+			++errorCounter
+			errorClientTitle.previousElementSibling.style.color = 'red'
+		} else {
+			errorClientTitle.previousElementSibling.style.color = '#024059'
+		}
+
+		if((name == '') || (name.length < 3)) {
+			++errorCounter
+			errorName.previousElementSibling.style.color = 'red'
+			errorName.previousElementSibling.classList.add('error-color')
+		} else if(name.match(nameFormat)) {
+			errorName.previousElementSibling.style.color = '#024059'
+		} else {
+			++errorCounter
+			errorName.style.color = 'red'
+			errorName.innerHTML = 'Only letters and spaces allowed'
+			errorName.previousElementSibling.style.marginBottom = '40px'
+		}
+
+		if(birthYear == 0) {
+			++errorCounter
+			errorBirthYear.previousElementSibling.style.color = 'red'
+		} else {
+			errorBirthYear.previousElementSibling.style.color = '#024059'
+		}
+
+		if(birthMonth == 0) {
+			++errorCounter
+			errorBirthMonth.previousElementSibling.style.color = 'red'
+		} else {
+			errorBirthMonth.previousElementSibling.style.color = '#024059'
+		}
+
+		if(birthDay == 0) {
+			++errorCounter
+			errorBirthDay.previousElementSibling.style.color = 'red'
+		} else {
+			errorBirthDay.previousElementSibling.style.color = '#024059'
+		}
+
+		if(email == '') {
+			++errorCounter
+			errorEmail.previousElementSibling.style.color = 'red'
+			errorEmail.previousElementSibling.classList.add('error-color')
+		} else if(email.match(mailFormat)) {
+			errorEmail.previousElementSibling.style.color = '#024059'
+		} else {
+			++errorCounter
+			errorEmail.style.color = 'red'
+			errorEmail.innerHTML = 'Invalid email format'
+			errorEmail.previousElementSibling.style.marginBottom = '40px'	
+		}
+
+		if(phone == '') {
+			++errorCounter
+			errorPhone.previousElementSibling.style.color = 'red'
+			errorPhone.previousElementSibling.classList.add('error-color')
+		} else if(isValidPhonenumber(phone)) {
+			errorPhone.previousElementSibling.style.color = '#024059'
+		} else {
+			++errorCounter
+			errorPhone.style.color = 'red'
+			errorPhone.innerHTML = 'Phone format should be international'
+			errorPhone.previousElementSibling.style.marginBottom = '40px'
+		}
+
+		if((country == '') || (country.length < 3)) {
+			++errorCounter
+			errorCountry.previousElementSibling.style.color = 'red'
+			errorCountry.previousElementSibling.classList.add('error-color')
+		} else if(country.match(countryNameFormat)) {
+			errorCountry.previousElementSibling.style.color = '#024059'
+		} else {
+			++errorCounter
+			errorCountry.style.color = 'red'
+			errorCountry.innerHTML = 'Only letters and spaces allowed'
+			errorCountry.previousElementSibling.style.marginBottom = '40px'
+		}
+
+		if(password == '') {
+			++errorCounter
+			errorPassword.style.color = 'red'
+		} else if(password.match(passwordFormat)) {
+			errorPassword.style.color = 'green'
+			errorPassword.innerHTML = '✓ Valid'
+			errorPassword.previousElementSibling.style.marginBottom = '40px'
+		} else {
+			++errorCounter
+			errorPassword.style.color = 'red'
+			errorPassword.previousElementSibling.style.marginBottom = '110px'
+			errorPassword.innerHTML = 'Your password should contain at least 8 characters with at least one digit, at least one lower case letter, at least one upper case letter'
+		}
+
+		if(passRepeat == '') {
+			++errorCounter
+			errorRepeatPass.innerHTML = 'This field is required'
+			errorRepeatPass.previousElementSibling.style.marginBottom = '40px'
+		} else if((password.match(passwordFormat)) && (passRepeat.match(password))) {
+			errorRepeatPass.style.color = 'green'
+			errorRepeatPass.innerHTML = '✓ Valid'
+		} else {
+			++errorCounter
+			errorRepeatPass.style.color = 'red'
+			errorRepeatPass.innerHTML = 'Your repeated password does not match choosen password'
+			errorRepeatPass.previousElementSibling.style.marginBottom = '40px'
+		}
+
+	    if(errorCounter == 0) {
+	    	// Set up our request
+	    	// XHR.open("POST", "FormDataHandler.php")
+
+		    // The data sent is what the user provided in the form
+		    XHR.send(FD)
+	    }
+	}
+
+	regForm.addEventListener('submit', event => {
+		event.preventDefault()
+		sendData()
+	});
+}
+// Registration Form End --------------------------------------------------------------//
+
+// Open Demo Form ---------------------------------------------------------------------//
+const openDemoForm = document.getElementById('open-demo-form')
+if(openDemoForm) {
+	// Form elements for error display
+	const errorName = openDemoForm.querySelector('.error_name')
+	const errorEmail = openDemoForm.querySelector('.error_email')
+	const errorPhone = openDemoForm.querySelector('.error_phone')
+	const errorCountry = openDemoForm.querySelector('.error_country')
+
+	function isValidPhonenumber(value) {
+    	return (/^\d{7,}$/).test(value.replace(/[\s()+\-\.]|ext/gi, ''))
+	}
+
+	function sendData() {
+	    const XHR = new XMLHttpRequest()
+
+	    // Bind the FormData object and the form element
+	    const FD = new FormData(openDemoForm)
+
+	    var name = FD.get('name')
+	    var email = FD.get('email')
+	    var phone = FD.get('phone')
+	    var country = FD.get('country')
+
+	    // Define what happens on successful data submission
+	    XHR.addEventListener( "load", function(event) {
+	      alert( event.target.responseText )
+		})
+
+	    // Define what happens in case of error
+	    XHR.addEventListener( "error", function( event ) {
+	      alert( 'Oops! Something went wrong.' )
+	    })
+
+		// Form data validation
+	    var errorCounter = 0
+		var nameFormat = /^[A-Za-z\s]*$/
+		var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+		var countryNameFormat = /^[A-Za-z\s]*$/
+
+		if((name == '') || (name.length < 3)) {
+			++errorCounter
+			errorName.previousElementSibling.style.color = 'red'
+			errorName.previousElementSibling.classList.add('error-color')
+		} else if(name.match(nameFormat)) {
+			errorName.previousElementSibling.style.color = '#024059'
+		} else {
+			++errorCounter
+			errorName.style.color = 'red'
+			errorName.innerHTML = 'Only letters and spaces allowed'
+			errorName.previousElementSibling.style.marginBottom = '40px'
+		}
+
+		if(email == '') {
+			++errorCounter
+			errorEmail.previousElementSibling.style.color = 'red'
+			errorEmail.previousElementSibling.classList.add('error-color')
+		} else if(email.match(mailFormat)) {
+			errorEmail.previousElementSibling.style.color = '#024059'
+		} else {
+			++errorCounter
+			errorEmail.style.color = 'red'
+			errorEmail.innerHTML = 'Invalid email format'
+			errorEmail.previousElementSibling.style.marginBottom = '40px'	
+		}
+
+		if(phone == '') {
+			++errorCounter
+			errorPhone.previousElementSibling.style.color = 'red'
+			errorPhone.previousElementSibling.classList.add('error-color')
+		} else if(isValidPhonenumber(phone)) {
+			errorPhone.previousElementSibling.style.color = '#024059'
+		} else {
+			++errorCounter
+			errorPhone.style.color = 'red'
+			errorPhone.innerHTML = 'Phone format should be international'
+			errorPhone.previousElementSibling.style.marginBottom = '40px'
+		}
+
+		if((country == '') || (country.length < 3)) {
+			++errorCounter
+			errorCountry.previousElementSibling.style.color = 'red'
+			errorCountry.previousElementSibling.classList.add('error-color')
+		} else if(country.match(countryNameFormat)) {
+			errorCountry.previousElementSibling.style.color = '#024059'
+		} else {
+			++errorCounter
+			errorCountry.style.color = 'red'
+			errorCountry.innerHTML = 'Only letters and spaces allowed'
+			errorCountry.previousElementSibling.style.marginBottom = '40px'
+		}
+
+	    if(errorCounter == 0) {
+	    	// Set up our request
+	    	// XHR.open("POST", "FormDataHandler.php")
+
+		    // The data sent is what the user provided in the form
+		    XHR.send(FD)
+	    }
+	}
+
+	openDemoForm.addEventListener('submit', event => {
+		event.preventDefault()
+		sendData()
+	});
+}
+// Open Demo Form End -----------------------------------------------------------------//
+
+/* Form Submission END -------------------------------------------------------------------------------------------------------------------------------*/
