@@ -336,27 +336,26 @@ if(contactForm) {
 		var nameFormat = /^[A-Za-z\s]*$/
 		var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 		var countryNameFormat = /^[A-Za-z\s]*$/
+		var subjectFormat = /^[a-zA-Z0-9?$@#()'!,+\-=_:.&€£*%\s]+$/
 
 		if((name == '') || (name.length < 3)) {
 			++errorCounter
 			errorName.innerHTML = 'This field is required'
 			errorName.previousElementSibling.style.marginBottom = '40px'
 		} else if(name.match(nameFormat)) {
-			errorName.style.color = 'green'
-			errorName.innerHTML = '✓ Valid'
+			errorName.innerHTML = ''
 		} else {
 			++errorCounter
 			errorName.innerHTML = 'Only letters and spaces allowed'
 			errorName.previousElementSibling.style.marginBottom = '40px'
 		}
 
-		if((surname == '') || (surname.length < 3)) {
+		if((surname == '') || (surname.length < 2)) {
 			++errorCounter
 			errorSurname.innerHTML = 'This field is required'
 			errorSurname.previousElementSibling.style.marginBottom = '40px'
 		} else if(surname.match(nameFormat)) {
-			errorSurname.style.color = 'green'
-			errorSurname.innerHTML = '✓ Valid'
+			errorSurname.innerHTML = ''
 		}	else {
 			++errorCounter
 			errorSurname.innerHTML = 'Only letters and spaces allowed'
@@ -378,6 +377,7 @@ if(contactForm) {
 
 		if(phone == '') {
 			++errorCounter
+			errorPhone.style.color = 'red'
 			errorPhone.innerHTML = 'This field is required'
 			errorPhone.previousElementSibling.style.marginBottom = '40px'
 		} else if(isValidPhonenumber(phone)) {
@@ -385,6 +385,7 @@ if(contactForm) {
 			errorPhone.innerHTML = '✓ Valid'
 		} else {
 			++errorCounter
+			errorPhone.style.color = 'red'
 			errorPhone.innerHTML = 'Invalid phone format'
 			errorPhone.previousElementSibling.style.marginBottom = '40px'
 		}
@@ -394,8 +395,7 @@ if(contactForm) {
 			errorCountry.innerHTML = 'This field is required'
 			errorCountry.previousElementSibling.style.marginBottom = '40px'
 		} else if(country.match(countryNameFormat)) {
-			errorCountry.style.color = 'green'
-			errorCountry.innerHTML = '✓ Valid'
+			errorCountry.innerHTML = ''
 		} else {
 			++errorCounter
 			errorCountry.innerHTML = 'Invalid country name format'
@@ -407,21 +407,22 @@ if(contactForm) {
 			errorPlatform.innerHTML = 'Choose platform'
 			errorPlatform.previousElementSibling.style.marginBottom = '40px'
 		} else {
-			errorPlatform.style.color = 'green'
-			errorPlatform.innerHTML = '✓ Valid'
+			errorPlatform.innerHTML = ''
 		}
 
 		if(subject == '') {
 			++errorCounter
 			errorSubject.innerHTML = 'Tell us your message'
+		} else if(subject.match(subjectFormat)) {
+			errorSubject.innerHTML = ''
 		} else {
-			errorSubject.style.color = 'green'
-			errorSubject.innerHTML = '✓ Valid'
+			++errorCounter
+			errorSubject.innerHTML = 'Message contains restricted symbols'
 		}
 
 	    if(errorCounter == 0) {
 	    	// Set up our request
-	    	// XHR.open("POST", "FormDataHandler.php")
+	    	XHR.open("POST", "contactFormDataHandler.php")
 
 		    // The data sent is what the user provided in the form
 		    XHR.send(FD)
@@ -608,7 +609,7 @@ if(regForm) {
 
 	    if(errorCounter == 0) {
 	    	// Set up our request
-	    	// XHR.open("POST", "FormDataHandler.php")
+	    	XHR.open("POST", "regFormDataHandler.php")
 
 		    // The data sent is what the user provided in the form
 		    XHR.send(FD)
@@ -716,7 +717,7 @@ if(openDemoForm) {
 
 	    if(errorCounter == 0) {
 	    	// Set up our request
-	    	// XHR.open("POST", "FormDataHandler.php")
+	    	XHR.open("POST", "oDemoFormDataHandler.php")
 
 		    // The data sent is what the user provided in the form
 		    XHR.send(FD)

@@ -640,11 +640,11 @@ li > ul {
 	background: no-repeat url('./imgs/rating-2.png');
 }
 
-.logo-dark {
+.logo-footer {
 	display: none;
-	width: 178px;
-	height: 58px;
-	background-image: url('./imgs/logo_dark.png');
+	width: 175px;
+	height: 48px;
+	background-image: url('./imgs/cfxm-logo.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
