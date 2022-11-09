@@ -49,11 +49,11 @@ a {
 }
 .switcher-controls li {
 	color: #024059; 
-	padding: 10px 32px 10px 30px;
-  border-radius: 50px;
-  text-align: center;
-  line-height: 1.2;
-  width: 100%;
+	padding: 11px 32px 11px 30px;;
+	border-radius: 50px;
+	text-align: center;
+	line-height: 1.2;
+	width: 100%;
 }
 
 .switcher-controls li.active { background-color: #04d9d9; }
