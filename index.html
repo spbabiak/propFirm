@@ -3,6 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
@@ -10,92 +17,6 @@
 	<title>CFXM - The Landing Place For The Modern Day Trader</title>
 </head>
 <body>
-	<!-- <div class="reg-popup-form-wrapper border-radius-10">
-		<div class="close-btn"></div>
-		<div class="form-header">
-			<h3>Registration details</h3>
-			<p>1. Please complete the following form using Latin characters.</p>
-			<p>2. Estimated time to complete your registration is 1 minute.</p>	
-		</div>
-		<form id="registration-form" class="popup-form" action="" method="post">
-			<label>
-				<select id="POST-clientType" name="POST-clientType">
-				    <option value="0" selected>I want to register as</option>
-				    <option value="individual">Individual Client</option>
-				    <option value="corporate">Corporate Client</option>
-				</select>
-				<span class="error_client_type" aria-live="polite"></span>
-			</label>
-			<label>
-				<select id="POST-title" name="POST-title">
-				    <option value="0" selected>Title</option>
-				    <option value="mr">Mr</option>
-				    <option value="mrs">Mrs</option>
-				    <option value="ms">Ms</option>
-				</select>
-				<span class="error_title" aria-live="polite"></span>
-			</label>
-			
-			<label>
-				<input id="POST-fullname" type="text" name="name" placeholder="Full name">
-				<span class="error_name" aria-live="polite"></span>
-			</label>
-			
-			<label class="flex" style="justify-content: space-between;">
-				<select id="POST-birth-y" name="POST-birth-y">
-				    <option value="0" selected>Birth Year</option>
-				</select>
-				<span class="error_birth_y" aria-live="polite"></span>
-				<select id="POST-birth-m" name="POST-birth-m">
-				    <option value="0" selected>Month</option>
-				    <option value="1">Jan</option>
-				    <option value="2">Feb</option>
-				    <option value="3">Mar</option>
-				    <option value="4">Apr</option>
-				    <option value="5">May</option>
-				    <option value="6">Jun</option>
-				    <option value="7">Jul</option>
-				    <option value="8">Aug</option>
-				    <option value="9">Sept</option>
-				    <option value="10">Oct</option>
-				    <option value="11">Nov</option>
-				    <option value="12">Dec</option>
-				</select>
-				<span class="error_birth_m" aria-live="polite"></span>
-				<select id="POST-birth-d" name="POST-birth-d">
-				    <option value="0" selected>Day</option>
-				</select>
-				<span class="error_birth_d" aria-live="polite"></span>
-			</label>
-
-			<label>
-				<input id="POST-email" type="email" name="email" placeholder="Email">
-				<span class="error_email" aria-live="polite"></span>
-			</label>
-		
-			<label>
-				<input id="POST-phone" type="tel" name="phone" placeholder="Phone number">
-				<span class="error_phone" aria-live="polite"></span>
-			</label>
-
-			<label>
-				<input id="POST-country" type="text" name="country" placeholder="Country of residence">
-				<span class="error_country" aria-live="polite"></span>
-			</label>
-
-			<label>
-				<input id="POST-password" type="text" class="password" name="password" placeholder="Password">
-				<span class="error_password" aria-live="polite">Your password should contain at least 8 characters with at least one digit, at least one lower case letter, at least one upper case letter</span>
-			</label>
-
-			<label>
-				<input id="POST-passwordRepeat" type="text" name="password-repeat" placeholder="Repeat password">
-				<span class="error_pass_repeat" aria-live="polite"></span>
-			</label>
-
-		 	<button class="btn border-radius-10 accent-bg-1 dark-text ff-bold" type="submit">Continue</button>
-  		</form>
-	</div> -->
 	<div class="demo-popup-form-wrapper border-radius-10">
 		<div class="close-btn"></div>
 		<div class="form-header">
@@ -168,13 +89,12 @@
 				<a href="index.html">
 					<div class="logo-mark" style="width: 175px; height: 48px;"><img src="./imgs/cfxm-logo.png" alt="Circle with three lines"></div>
 				</a>
-				<!-- <div class="light-text logo-text"><span class="ff-bold"><a href="#">CFXM</span></a></div>	 -->
 			</div>
 			<nav class="nav-horizontal">
 				<ul class="flex light-text">
 					<li><a href="index.html">Home</a></li>
-					<li class="position-relative drop-down">
-						<a href="#">Markets</a>
+					<li>
+						<div class="position-relative drop-down"><a href="#">Markets</a></div>
 						<ul class="drop-down-list">
 							<li><a href="forex.html">Forex</a></li>
 							<li><a href="commodities_and_indices.html">Commodities and Indices</a></li>
