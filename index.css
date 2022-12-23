@@ -1202,9 +1202,8 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 	border-bottom-right-radius: 10px;
 }
 
-/* Forex page ------------------------------------------------------------------------------------- */
-.page-hero-section { background-color: #0d2340; padding-top: 100px;}
-.page-hero-content { padding: 135px 0 35px 0; }
+.page-hero-section { background-color: #0d2340; padding-top: 80px;}
+.page-hero-content { padding: 50px 0 35px 0; }
 .page-hero-content .hero-title { font-size: 30px; }
 .page-section { padding-top: 50px !important; }
 .page-section h2:not(:first-child) { margin-top: 60px; }
@@ -1222,6 +1221,68 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 }
 .instructions-section .cta-wrapper { margin-inline: auto; max-width: 250px;}
 .instructions-section .cta-wrapper > a { margin: 0; }
+
+/* Prop cards */
+.prop-cards {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	color: #fff;
+}
+
+.prop-card-wrapper {
+	width: 100%;
+	max-width: 30rem;
+	background-color: #16103b;
+}
+
+.prop-card-header {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background-color: #231a60;
+	padding: 2.5rem 3rem;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.prop-price {
+	font-size: 2.5rem;
+}
+
+.prop-title {
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	color: #5497fb;
+}
+
+.prop-card-body {
+	font-size: 1.4rem;
+	padding: 2.5rem 3rem;
+}
+
+
+.prop-card-details li {
+	padding: 1rem 1rem;
+	border-bottom: 1px solid #544480;
+}
+
+.prop-card-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.prop-fee {
+	text-transform: uppercase;
+	font-size: 1.4rem;
+}
+
+.prop-card-cta {
+	margin-block-start: 2rem;
+}
 
 /* Media queries */
 @media screen and (min-width: 340px) {
@@ -1437,9 +1498,8 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
     font-size: 22px;
   }
 
-  /* Forex page --------------------------------- */
   .page-section { padding-top: 100px !important; }
-  .page-hero-section { padding: 200px 0 100px 0; }
+	.page-hero-section {padding-top: 120px;}
   .page-hero-content .hero-title { font-size: 100px; }
   .icons .step { 
   	flex-basis: 25%; 
