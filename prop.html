@@ -13,30 +13,30 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="index.css">
-	<title>CFXM | Prop </title>
+	<link rel="stylesheet" type="text/css" href="/assets/styles.css">
+	<title>CFXM | Cryptocurrencies</title>
 </head>
 <body>
 	<header class="main-header">
 		<div class="wrapper flex">
 			<div class="wrapper-logo" style="flex-grow: 1;">
 				<a class="flex" href="index.html" style="align-items: center;">
-					<div class="logo-mark" style="width: 175px; height: 48px;"><img src="./imgs/cfxm-logo.png" alt="Circle with three lines"></div>
+					<div class="logo-mark" style="width: 175px; height: 48px;"><img src="./imgs/apex_logo.png" alt="Circle with three lines"></div>
 				</a>	
 			</div>
 			<nav class="nav-horizontal">
 				<ul class="flex light-text">
 					<li><a href="index.html">Home</a></li>
 					<li>
-						<div class="position-relative drop-down"><a href="#">Markets</a></div>
+						<div class="position-relative drop-down"><a href="#">Programs</a></div>
 						<ul class="drop-down-list">
-							<li><a href="forex.html">Forex</a></li>
-							<li><a href="commodities_and_indices.html">Commodities and Indices</a></li>
-							<li><a href="cryptocurrencies.html">Cryptocurrencies</a></li>
+							<li><a href="live.html">Live Account</a></li>
+							<li><a href="demo.html">Demo Account</a></li>
+							<li><a href="prop.html">Prop Challenge</a></li>
 						</ul>
 					</li>
 					<li><a href="about.html">About</a></li>
-					<li><a href="prop.html">Prop </a></li>
+					<li><a href="faq.html">FAQ</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
@@ -45,15 +45,15 @@
 				<ul class="light-text">
 					<li><a href="index.html">Home</a></li>
 					<li>
-						<div class="position-relative drop-down"><a href="#">Markets</a></div>
+						<div class="position-relative drop-down"><a href="#">Programs</a></div>
 						<ul class="drop-down-list">
-							<li><a href="forex.html">Forex</a></li>
-							<li><a href="commodities_and_indices.html">Commodities and Indices</a></li>
-							<li><a href="cryptocurrencies.html">Cryptocurrencies</a></li>
+							<li><a href="live.html">Live Account</a></li>
+							<li><a href="demo.html">Demo Account</a></li>
+							<li><a href="prop.html">Prop Challenge</a></li>
 						</ul>
 					</li>
 					<li><a href="about.html">About</a></li>
-					<li><a href="prop.html">Prop</a></li>
+					<li><a href="faq.html">FAQ</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
@@ -63,11 +63,6 @@
 				</div>
 				<div class="login-lang-wrapper">
 					<div><a class="login-cta border border-radius-10 accent-text" href="#">Client Login</a></div>
-					<div class="flex" style="align-items: center;">
-						<ul class="langs">
-							<li><img src="./imgs/flag_england.png" alt="England flag"></li>
-						</ul>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -76,152 +71,337 @@
 	<section class="page-hero-section">
 		<div class="wrapper">
 			<div class="page-hero-content">
-				<h1 class="hero-title accent-text">Prop</h1>
+				<h1 class="hero-title accent-text">Cryptocurrencies</h1>
 			</div>
 		</div>
 	</section>
 
-	<section class="page-section prop-cards">
-		<div class="prop-card-wrapper border-radius-10">
-			<div class="prop-card-header">
-				<div class="prop-price ff-bold">$25,000</div>
-				<div class="prop-title">BEGINNER</div>
-			</div>
-			<div class="prop-card-body">
-				<ul class="prop-card-details">
-					<li>Profit Share: <span  class="ff-bold">80%</span></li>
-					<li>Profit Target (10%): <span class="ff-bold">$2,500</span></li>
-					<li>Daily Loss Limit: <span class="ff-bold accent-text">5%</spn></li>
-					<li>Max Trailing Drawdown: <span class="ff-bold accent-text">8%</span></li>
-					<li>Leverage: <span class="ff-bold">100:1</span></li>
-				</ul>
-			</div>
-			<div class="prop-card-footer">
-				<div class="prop-fee accent-text">Tryout Fee: <span>$220</span></div>
-				<div>Fee 100% Refunded Upon Passing Tryout</div>
-				<div class="prop-card-cta">
-					<a class="btn popup-reg-btn border-radius-10 accent-bg-1 dark-text ff-bold" style="padding: 1.4rem 3rem; display: inline-block;text-align: center; margin-block-end: 3rem;" href="https://apply.zenfinex.com/account/live/?link_id=dgeug21855&referral_id=0010729">Trade Now</a>
+	<section id="programs" class="programs-section">
+		<div class="wrapper">
+			<div class="section-content">
+				<div class="table-switchers">
+					<div class="switcher" style="max-width: 435px;">
+						<span class="ff-bold">Leverage</span>
+						<ul class="switcher-controls">
+							<li class="active">Low Leverage</li>
+							<li>High Leverage</li>
+						</ul>
+					</div>
+					<div class="switcher currency-switcher-desktop" style="max-width: 1040px;">
+						<span class="ff-bold">Currency</span>
+						<ul class="switcher-controls">
+							<li class="active">USD</li>
+							<li>GBP</li>
+							<li>EUR</li>
+							<li>CZK</li>
+							<li>AUD</li>
+							<li>CAD</li>
+							<li>CHF</li>
+						</ul>
+					</div>
+					<div class="switcher currency-switcher-mobile" style="max-width: 332px;">
+						<span class="ff-bold">Currency</span>
+						<ul class="switcher-controls">
+							<li class="active">USD</li>
+							<li>GBP</li>
+							<li>EUR</li>
+							<li>CZK</li>
+						</ul>
+						<ul class="switcher-controls" style="width: 200px; align-self: center;">
+							<li>AUD</li>
+							<li>CAD</li>
+							<li>CHF</li>
+						</ul>
+					</div>
 				</div>
+				<div class="table border-radius-10">
+					<span class="label-wrapper">
+						<span class="tabel-label">Popular</span>
+					</span>
+					<ul>
+						<li class="table-row">
+							<div class="table-carousel">
+								<div class="slider">
+									<span></span>
+									<span class="arrow left"></span>
+					                <span class="arrow right"></span>
+									<div class="slide">
+										<span class="currency ff-secondary ff-bold accent-text">$100</span>
+									</div>
+									<div class="slide">
+										<span class="currency ff-secondary ff-bold accent-text">$2,000</span>
+									</div>
+									<div class="slide" >
+										<span class="currency ff-secondary ff-bold accent-text">$25,000</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="table-row">
+							<div class="table-carousel">
+								<div class="slider">
+									<span>Minimum Deposit</span>
+									<div class="slide">
+										<span>$100<br>MICRO ACCOUNT</span>
+									</div>
+									<div class="slide" >
+										<span>$2,000<br>STANDARD ACCOUNT</span>
+									</div>
+									<div class="slide" >
+										<span>$25,000<br>VIP ACCOUNT</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="table-row">
+							<div class="table-carousel">
+								<div class="slider">
+									<span>Trading Platform</span>
+									<div class="slide">
+										<span>cTrader/MT4/MT5</span>
+									</div>
+									<div class="slide" >
+										<span>cTrader/MT4/MT5</span>
+									</div>
+									<div class="slide" >
+										<span>cTrader/MT4/MT5</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="table-row">
+							<div class="table-carousel">
+								<div class="slider">
+									<span>Min Spreads in Pips</span>
+									<div class="slide">
+										<span>0.1</span>
+									</div>
+									<div class="slide" >
+										<span>0.1</span>
+									</div>
+									<div class="slide" >
+										<span>0.1</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="table-row">
+							<div class="table-carousel">
+								<div class="slider">
+									<span>Max Leverage</span>
+									<div class="slide">
+										<span>400:1</span>
+									</div>
+									<div class="slide" >
+										<span>400:1</span>
+									</div>
+									<div class="slide" >
+										<span>400:1</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="table-row">
+							<div class="table-carousel">
+								<div class="slider">
+									<span>Several Location</span>
+									<div class="slide">
+										<span>London</span>
+									</div>
+									<div class="slide" >
+										<span>London</span>
+									</div>
+									<div class="slide" >
+										<span>London</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="table-row">
+							<div class="table-carousel">
+								<div class="slider">
+									<span>Microlot Trading (0.01)</span>
+									<div class="slide">
+										<span>Yes</span>
+									</div>
+									<div class="slide" >
+										<span>Yes</span>
+									</div>
+									<div class="slide" >
+										<span>Yes</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="table-row">
+							<div class="table-carousel">
+								<div class="slider">
+									<span>Currency Pairs</span>
+									<div class="slide">
+										<span>61</span>
+									</div>
+									<div class="slide" >
+										<span>61</span>
+									</div>
+									<div class="slide" >
+										<span>61</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="table-row">
+							<div class="table-carousel">
+								<div class="slider">
+									<span>Index CFD Trading</span>
+									<div class="slide">
+										<span>Yes</span>
+									</div>
+									<div class="slide" >
+										<span>Yes</span>
+									</div>
+									<div class="slide" >
+										<span>Yes</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="table-row">
+							<div class="table-carousel">
+								<div class="slider">
+									<span>One Click Trading</span>
+									<div class="slide">
+										<span>Yes</span>
+									</div>
+									<div class="slide" >
+										<span>Yes</span>
+									</div>
+									<div class="slide" >
+										<span>Yes</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="table-row">
+							<div class="table-carousel">
+								<div class="slider">
+									<span>Islamic Accounts</span>
+									<div class="slide">
+										<span>Yes</span>
+									</div>
+									<div class="slide" >
+										<span>Yes</span>
+									</div>
+									<div class="slide" >
+										<span>Yes</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="table-row">
+							<div class="table-carousel">
+								<div class="slider">
+									<span>Trading Styles Allowed</span>
+									<div class="slide">
+										<span>All</span>
+									</div>
+									<div class="slide" >
+										<span>All</span>
+									</div>
+									<div class="slide" >
+										<span>All</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="table-row">
+							<div class="table-carousel">
+								<div class="slider">
+									<span>Order Restrictions</span>
+									<div class="slide">
+										<span>None</span>
+									</div>
+									<div class="slide" >
+										<span>None</span>
+									</div>
+									<div class="slide" >
+										<span>None</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="table-row">
+							<div class="table-carousel">
+								<div class="slider">
+									<span style="padding: 25px 0 25px 0;"></span>
+									<div class="slide" style="padding: 20px 0px;">
+										<span><a class="btn popup-reg-btn border-radius-10 accent-bg-1 light-text ff-bold" style="margin-inline: auto; width: 116px; height: 46px; padding: 10px;" href="https://apply.zenfinex.com/account/live/?link_id=dgeug21855&referral_id=0010729">Trade Now</a></span>
+									</div>
+									<div class="slide" style="padding: 20px 0px;">
+										<span><a class="btn popup-reg-btn border-radius-10 accent-bg-1 light-text ff-bold" style="margin-inline: auto; width: 116px; height: 46px; padding: 10px;" href="https://apply.zenfinex.com/account/live/?link_id=dgeug21855&referral_id=0010729">Trade Now</a></span>
+									</div>
+									<div class="slide" style="padding: 20px 0px;">
+										<span><a class="btn popup-reg-btn border-radius-10 accent-bg-1 light-text ff-bold" style="margin-inline: auto; width: 116px; height: 46px; padding: 10px;" href="https://apply.zenfinex.com/account/live/?link_id=dgeug21855&referral_id=0010729">Trade Now</a></span>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>		
+	</section>
+
+	<section class="page-section">
+		<div class="wrapper">
+			<div class="section-text">
+				<p>Speculation in digital currencies (cryptocurrencies continues to reach an all-time high and we are proud at CFXM to offer our the full suite of the most popular cryptos to trade including BTC/USD, ETH/USD, LTC/USD, and BCH/USD. </p>
+				<br>
+				<p>All cryptocurrencies are traded on a CFD basis with a leverage basis of up to 200:1. Since clients are trading on a CFD basis, this means the client does not physically own the cryptocurrency and rather is speculating on the price movement.</p>
+				<br>
+				<p>Along with supply and demand factors, cryptocurrencies move based on market sentiment – similar to Forex and Equities. Cryptocurrencies tend to have wider swings than other financial instruments to traders should take care to properly manage their risk when they trade cryptos.</p>
 			</div>
 		</div>
-		
-		<div class="prop-card-wrapper border-radius-10">
-			<div class="prop-card-header">
-				<div class="prop-price ff-bold">$50,000</div>
-				<div class="prop-title">INTERMEDIATE</div>
+	</section>
+	<section class="instructions-section bg-secondary">
+		<div class="wrapper">
+			<div class="section-text">
+				<h2 class="text-center">Ready to trade?</h2>
 			</div>
-			<div class="prop-card-body">
-				<ul class="prop-card-details">
-					<li>Profit Share: <span  class="ff-bold">80%</span></li>
-					<li>Profit Target (10%): <span class="ff-bold">$5,000</span></li>
-					<li>Daily Loss Limit: <span class="ff-bold accent-text">5%</spn></li>
-					<li>Max Trailing Drawdown: <span class="ff-bold accent-text">8%</span></li>
-					<li>Leverage: <span class="ff-bold">100:1</span></li>
-				</ul>
-			</div>
-			<div class="prop-card-footer">
-				<div class="prop-fee accent-text">Tryout Fee: <span>$299</span></div>
-				<div>Fee 100% Refunded Upon Passing Tryout</div>
-				<div class="prop-card-cta">
-					<a class="btn popup-reg-btn border-radius-10 accent-bg-1 dark-text ff-bold" style="padding: 1.4rem 3rem; display: inline-block;text-align: center; margin-block-end: 3rem;" href="https://apply.zenfinex.com/account/live/?link_id=dgeug21855&referral_id=0010729">Trade Now</a>
+
+			<div class="icons section-content">
+				<div class="step mb">
+					<div class="icon-community"></div>
+					<div class="step-text">
+						<h3>Sign Up</h3>
+						<p>Sign up for an account in just a matter of minutes</p>
+					</div>
+				</div>
+				<div class="step mb">
+					<div class="icon-help"></div>
+					<div class="step-text">
+						<h3>Verify Your ID</h3>
+						<p>Verify Your ID uploading your documents</p>
+					</div>
+				</div>
+				<div class="step">
+					<div class="icon-pay"></div>
+					<div class="step-text">
+						<h3>Start Trading</h3>
+						<p>Fund your account and start trading on the world's financial markets</p>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="prop-card-wrapper border-radius-10">
-			<div class="prop-card-header">
-				<div class="prop-price ff-bold">$100,000</div>
-				<div class="prop-title">EXPERIENCED</div>
-			</div>
-			<div class="prop-card-body">
-				<ul class="prop-card-details">
-					<li>Profit Share: <span  class="ff-bold">80%</span></li>
-					<li>Profit Target (10%): <span class="ff-bold">$10,000</span></li>
-					<li>Daily Loss Limit: <span class="ff-bold accent-text">5%</spn></li>
-					<li>Max Trailing Drawdown: <span class="ff-bold accent-text">8%</span></li>
-					<li>Leverage: <span class="ff-bold">100:1</span></li>
-				</ul>
-			</div>
-			<div class="prop-card-footer">
-				<div class="prop-fee accent-text">Tryout Fee: <span>$599</span></div>
-				<div>Fee 100% Refunded Upon Passing Tryout</div>
-				<div class="prop-card-cta">
-					<a class="btn popup-reg-btn border-radius-10 accent-bg-1 dark-text ff-bold" style="padding: 1.4rem 3rem; display: inline-block;text-align: center; margin-block-end: 3rem;" href="https://apply.zenfinex.com/account/live/?link_id=dgeug21855&referral_id=0010729">Trade Now</a>
-				</div>
-			</div>
-		</div>
-		<div class="prop-card-wrapper border-radius-10">
-			<div class="prop-card-header">
-				<div class="prop-price ff-bold">$250,000</div>
-				<div class="prop-title">VETERAN</div>
-			</div>
-			<div class="prop-card-body">
-				<ul class="prop-card-details">
-					<li>Profit Share: <span  class="ff-bold">80%</span></li>
-					<li>Profit Target (10%): <span class="ff-bold">$25,000</span></li>
-					<li>Daily Loss Limit: <span class="ff-bold accent-text">5%</spn></li>
-					<li>Max Trailing Drawdown: <span class="ff-bold accent-text">8%</span></li>
-					<li>Leverage: <span class="ff-bold">100:1</span></li>
-				</ul>
-			</div>
-			<div class="prop-card-footer">
-				<div class="prop-fee accent-text">Tryout Fee: <span>$1,499</span></div>
-				<div>Fee 100% Refunded Upon Passing Tryout</div>
-				<div class="prop-card-cta">
-					<a class="btn popup-reg-btn border-radius-10 accent-bg-1 dark-text ff-bold" style="padding: 1.4rem 3rem; display: inline-block;text-align: center; margin-block-end: 3rem;" href="https://apply.zenfinex.com/account/live/?link_id=dgeug21855&referral_id=0010729">Trade Now</a>
-				</div>
-			</div>
-		</div>
-		<div class="prop-card-wrapper border-radius-10">
-			<div class="prop-card-header">
-				<div class="prop-price ff-bold">$500,000</div>
-				<div class="prop-title">GURU</div>
-			</div>
-			<div class="prop-card-body">
-				<ul class="prop-card-details">
-					<li>Profit Share: <span  class="ff-bold">80%</span></li>
-					<li>Profit Target (10%): <span class="ff-bold">$50,000</span></li>
-					<li>Daily Loss Limit: <span class="ff-bold accent-text">5%</spn></li>
-					<li>Max Trailing Drawdown: <span class="ff-bold accent-text">8%</span></li>
-					<li>Leverage: <span class="ff-bold">100:1</span></li>
-				</ul>
-			</div>
-			<div class="prop-card-footer">
-				<div class="prop-fee accent-text">Tryout Fee: <span>$2,999</span></div>
-				<div>Fee 100% Refunded Upon Passing Tryout</div>
-				<div class="prop-card-cta">
-					<a class="btn popup-reg-btn border-radius-10 accent-bg-1 dark-text ff-bold" style="padding: 1.4rem 3rem; display: inline-block;text-align: center; margin-block-end: 3rem;" href="https://apply.zenfinex.com/account/live/?link_id=dgeug21855&referral_id=0010729">Trade Now</a>
-				</div>
-			</div>
-		</div>
-		<div class="prop-card-wrapper border-radius-10">
-			<div class="prop-card-header">
-				<div class="prop-price ff-bold">$1,000,000</div>
-				<div class="prop-title">GRANDMASTER</div>
-			</div>
-			<div class="prop-card-body">
-				<ul class="prop-card-details">
-					<li>Profit Share: <span  class="ff-bold">80%</span></li>
-					<li>Profit Target (10%): <span class="ff-bold">$100,000</span></li>
-					<li>Daily Loss Limit: <span class="ff-bold accent-text">5%</spn></li>
-					<li>Max Trailing Drawdown: <span class="ff-bold accent-text">8%</span></li>
-					<li>Leverage: <span class="ff-bold">100:1</span></li>
-				</ul>
-			</div>
-			<div class="prop-card-footer">
-				<div class="prop-fee accent-text">Tryout Fee: <span>$4,999</span></div>
-				<div>Fee 100% Refunded Upon Passing Tryout</div>
-				<div class="prop-card-cta">
-					<a class="btn popup-reg-btn border-radius-10 accent-bg-1 dark-text ff-bold" style="padding: 1.4rem 3rem; display: inline-block;text-align: center; margin-block-end: 3rem;" href="https://apply.zenfinex.com/account/live/?link_id=dgeug21855&referral_id=0010729">Trade Now</a>
-				</div>
+			<div class="cta-wrapper flex">
+				<a class="btn popup-reg-btn border-radius-10 accent-bg-1 dark-text ff-bold" href="https://apply.zenfinex.com/account/live/?link_id=dgeug21855&referral_id=0010729">Start Trading</a>
 			</div>
 		</div>
 	</section>
 
-	<footer style="margin-top: 80px;">
+	<footer>
 		<div class="wrapper">
 			<div class="footer-top flex">
 				<div class="logo-section" style="flex-grow: 1;">
-					<span class="logo-footer"></span>
+					<!-- <a href="/"><span class="logo-footer"></span></a> -->
 					<ul class="social-icons flex">
 						<li class="icon-in"><a href="#"></a></li>
 						<li class="icon-twitter"><a href="#"></a></li>
@@ -229,32 +409,32 @@
 						<li class="icon-youtube"><a href="#"></a></li>
 						<li class="icon-insta"><a href="#"></a></li>
 					</ul>
-					<span class="copyright-1">© CFXM 2022</span>
+					<span class="copyright-1">© Apex Markets Group <span class="year"></span></span>
 				</div>
 				<div class="nav-section-wrapper flex flex-wrap">
 					<ul class="nav-section">
-						<li><a href="about.html">About</a></li>
+						<li><a href="privacy_policy.html">Privacy Policy</a></li>
 					</ul>
 					<ul class="nav-section">
-						<li><a href="prop.html">Prop</a></li>
+						<li><a href="kyc_aml.html">KYC & AML</a></li>
 					</ul>
 					<ul class="nav-section">
-						<li><a href="contact.html">Contact</a></li>
+						<li><a href="risk_disclosure.html">Risk Disclosure</a></li>
 					</ul>
 					<ul class="nav-section">
-						<li><a href="risc_disclaimer.html">Risc Disclosure</a></li>
+						<li><a href="dsrl.html">Dispute Resolution</a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<div class="footer-bottom">
 			<div class="disclaimer wrapper">
-				<p>*This website provides services and information on this site that are not aimed at citizens and/or residents of the USA. The information provided here is not proposed for distribution to or use by any jurisdiction where such distribution or use would be contrary to local law or regulation.**Risk Warning: Trading leveraged products such as Forex and Cryptos may not be suitable for all investors as they carry a degree of risk to your capital. Please ensure that you fully understand the risks involved, taking into account your investments objectives and level of experience, before trading, and if necessary seek independent advice. <a style="color: #0d2340;" class="ff-bold" href="risc_disclaimer.html" target=”_blank”>Read more.</a></p>
+				<p>Risk Warning: Trading Contracts for Difference (CFDs) on margin carries a high level of risk and may not be suitable for all investors. Before deciding to trade Contracts for Difference (CFDs), you should carefully consider your trading objectives, level of experience and risk appetite. Please ensure you fully understand the risks and take appropriate care to manage your risk.</p> 
 			</div>
-			<div class="copyright-2">© CFXM 2022</div>
+			<div class="copyright-2">© Apex Markets Group <span class="year"></span></div>
 		</div>
 		
 	</footer>
-	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="/assets/main.js"></script>
 </body>
 </html>

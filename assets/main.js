@@ -32,6 +32,14 @@ const currencySwitcherContolMobile = document.querySelectorAll('.currency-switch
 const currencySwitcherItemsMobileArray = Array.from(currencySwitcherContolMobile)
 let currencyArray = []
 
+const copyrightYears = document.getElementsByClassName('year')
+let copyrightYearsArray = Array.from(copyrightYears)
+let currentDate = new Date()
+let currentYear = currentDate.getFullYear()
+copyrightYearsArray.forEach((copyrightYear) => {
+	copyrightYear.innerHTML = currentYear
+})
+
 
 // Switcher Controls -------------------------------------------------------------------------------
 switcherContolsArray.forEach(item => {

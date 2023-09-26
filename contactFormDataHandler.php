@@ -13,8 +13,7 @@ function test_input($data) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-
+  
   if (empty($_POST["name"])) {
     $nameErr = "Name is required";
     echo $nameErr . "\r\n";
@@ -70,19 +69,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
   }
 
-  if ((empty($_POST["POST-platform"])) || ($_POST["POST-platform"] == 0)) {
+  if (empty($_POST["platform"])) {
     $platformErr = "Platform is required";
     echo $platformErr . "\r\n";
   } else {
-    $platform = test_input($_POST["POST-platform"]);
+    $platform = test_input($_POST["platform"]);
   }
 
   if(empty($_POST["message"])) {
     $txtErr = "Message is required";
     echo $txtErr . "\r\n";
-    echo $txtErr;
   } else {
-    $txt = test_input($_POST["POST-subject"]);
+    $txt = test_input($_POST["message"]);
     if (!preg_match("/^[a-zA-Z0-9?$@#()'!,+\-=_:.&€£*%\s]+$/", $txt)) {
       $txtErr = "Invalid message format";
       echo $txtErr . "\r\n";
@@ -90,10 +88,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 }
 
-  $message = "Name: " . $name . "\r\nSurname: " . $surname . "\r\nEmail: " . $email . "\r\nPhone: " . $phone . "\r\Country: " . $country . "\r\nPlatform: " . $platform . "\r\nMessage: " . $txt . "\r\n";
+  $message = "Name: " . $name . "\r\nSurname: " . $surname . "\r\nEmail: " . $email . "\r\nPhone: " . $phone . "\r\nCountry: " . $country . "\r\nPlatform: " . $platform . "\r\nMessage: " . $txt . "\r\n";
 
   // Sending form data on email
-  // mail('info@email', 'New message from The Prop Firm website Contact Form', $message);
+  mail('dan@atomiqconsulting.com', 'New request for open demo from CFXM website', $message);
 
   echo 'Thank you! Message have been sent successfully. We will contact you as soon as possible';
 ?>
