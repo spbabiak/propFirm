@@ -264,6 +264,32 @@ section:nth-child(5) .section-content {
 	margin-bottom: 35px;	
 }
 
+.countries-list {
+	text-decoration: underline dashed;
+	color: teal;
+	display: inline;
+	position: relative;
+}
+
+.countries-list-tooltip {
+	display: none;
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: white;
+	width: 170px;
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .1);
+	border-radius: 4px;
+	font-size: .85rem;
+	padding: .75rem;
+	margin-bottom: .5rem;
+}
+
+.countries-list:hover .countries-list-tooltip {
+	display: block;
+}
+
 /* flow */
 body > section + section:not(:first-child) {
 	padding-top: 60px;
@@ -358,8 +384,14 @@ footer .nav-section a:hover { color: #04d9d9; }
 .login-cta { 
 	display: block;
   text-align: center;
-	width: 192px;
-	padding: 6px 0 6px 0; 
+	width: 220px;
+	padding: 12px 0 12px 0; 
+	background-color: #04d9d9;
+}
+
+.login-cta:hover {
+	background-color: #024059;
+	color: #fff;
 }
 
 .position-relative {
@@ -415,19 +447,30 @@ li > ul {
 
 .nav-horizontal ul li ul.drop-down-list {
 	display: none;
-	width: 340px;
 	position: absolute;
   top: 50px;
   left: 0;
   margin-left: 0;
+	background-color: teal;
+	/* padding: 1.5em; */
+	width: 226px;
+	border-radius: 4px;
 }
 
 .drop-down:hover .drop-down-list { display: block; }
 
 .nav-horizontal .drop-down-list li {
-	margin-bottom: 15px;
+	/* margin-bottom: 15px; */
+	padding: 1rem;
 }
 
+.nav-horizontal .drop-down-list li:hover {
+	background-color: #024059;
+}
+
+.nav-horizontal .drop-down-list li a:hover {
+	color: #fff;
+}
 .login-lang-wrapper {
 	display: none;
 }
@@ -871,11 +914,6 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 	margin-inline: 25px;
 }
 
-.break-line::after {
-	content: '\a';
-	white-space: pre;
-}
-
 .dark-text {
 	color: #0d2340;
 }
@@ -947,6 +985,7 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 .hero-title { 
 	font-size: 32px; 
 	margin-bottom: 18px;
+	margin-top: 3rem;
 	line-height: 1.25;
 }
 
@@ -1250,7 +1289,7 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 .prop-card-wrapper {
 	width: 100%;
 	max-width: 30rem;
-	background-color: #16103b;
+	background-color: #0d2340;
 }
 
 .prop-card-header {
@@ -1258,7 +1297,7 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-	background-color: #231a60;
+	background-color: teal;
 	padding: 2.5rem 3rem;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
@@ -1271,7 +1310,8 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 .prop-title {
 	font-size: 1.4rem;
 	text-transform: uppercase;
-	color: #5497fb;
+	color: rgb(0, 52, 52);
+	font-weight: bold;
 }
 
 .prop-card-body {
@@ -1282,7 +1322,7 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 
 .prop-card-details li {
 	padding: 1rem 1rem;
-	border-bottom: 1px solid #544480;
+	border-bottom: 1px solid #d1d1d124;
 }
 
 .prop-card-footer {
@@ -1308,6 +1348,10 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 }
 
 @media screen and (min-width: 960px) {
+	.break-line::after {
+		content: '\a';
+		white-space: pre;
+	}
 	.label-wrapper { right: 130px; display: none;}
 	.tabel-label { padding: 12px 85px 12px 85px; }
 	.table { padding: 30px 30px 100px 30px; }
