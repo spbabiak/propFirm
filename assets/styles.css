@@ -1257,7 +1257,7 @@ footer .nav-section li:not(:last-child) { margin-bottom: 20px; }
 	border-bottom-right-radius: 10px;
 }
 
-.page-hero-section { background-color: #0d2340; padding-top: 80px;}
+.page-hero-section { background-color: #0d2340; padding-top: 150px;}
 .page-hero-content { padding: 50px 0 35px 0; }
 .page-hero-content .hero-title { font-size: 30px; }
 .page-section { padding-top: 50px !important; }
