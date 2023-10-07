@@ -1,7 +1,7 @@
 <?php
 
-$name = $email = $phone = $country = '';
-$nameErr = $emailErr = $phoneErr = $countryErr = '';
+$name = $surname = $email = $phone = '';
+$nameErr = $surNameErr = $emailErr = $phoneErr = '';
 $message = '';
 
 function test_input($data) {
@@ -60,8 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $message = "Name: " . $name . "\r\nSurname: " . $surname . "\r\nEmail: " . $email . "\r\nPhone: " . $phone . "\r\n";
 
 // Sending form data on email
-// mail('dan@atomiqconsulting.com', 'New request for open demo from Apex website', $message);
-mail('spbabiak@gmail.com', 'New request for open live from Apex website', $message);
+mail('dan@atomiqconsulting.com', 'New request for open demo from Apex website', $message);
 
 echo 'Thank you! Message have been sent successfully. We will contact you as soon as possible';
 

@@ -314,7 +314,7 @@ const openDemoForm = document.getElementById('open-demo-form')
 if(openDemoForm) {
 	// Form elements for error display
 	const errorName = openDemoForm.querySelector('.error_name')
-	const errorSurname = contactForm.querySelector('.error_surname')
+	const errorSurname = openDemoForm.querySelector('.error_surname')
 	const errorEmail = openDemoForm.querySelector('.error_email')
 	const errorPhone = openDemoForm.querySelector('.error_phone')
 
@@ -329,7 +329,7 @@ if(openDemoForm) {
 	    const FD = new FormData(openDemoForm)
 
 	    var name = FD.get('name')
-	    var name = FD.get('surname')
+	    var surname = FD.get('surname')
 	    var email = FD.get('email')
 	    var phone = FD.get('phone')
 	    // var country = FD.get('country')
@@ -420,12 +420,12 @@ if(openDemoForm) {
 
 // Open Live Form ---------------------------------------------------------------------//
 const openLiveForm = document.getElementById('open-live-form')
-if(openDemoForm) {
+if(openLiveForm) {
 	// Form elements for error display
-	const errorName = openDemoForm.querySelector('.error_name')
-	const errorSurname = contactForm.querySelector('.error_surname')
-	const errorEmail = openDemoForm.querySelector('.error_email')
-	const errorPhone = openDemoForm.querySelector('.error_phone')
+	const errorName = openLiveForm.querySelector('.error_name')
+	const errorSurname = openLiveForm.querySelector('.error_surname')
+	const errorEmail = openLiveForm.querySelector('.error_email')
+	const errorPhone = openLiveForm.querySelector('.error_phone')
 
 	function isValidPhonenumber(value) {
     	return (/^\d{7,}$/).test(value.replace(/[\s()+\-\.]|ext/gi, ''))
@@ -435,10 +435,10 @@ if(openDemoForm) {
 	    const XHR = new XMLHttpRequest()
 
 	    // Bind the FormData object and the form element
-	    const FD = new FormData(openDemoForm)
+	    const FD = new FormData(openLiveForm)
 
 	    var name = FD.get('name')
-	    var name = FD.get('surname')
+	    var surname = FD.get('surname')
 	    var email = FD.get('email')
 	    var phone = FD.get('phone')
 	    // var country = FD.get('country')
@@ -520,11 +520,11 @@ if(openDemoForm) {
 	    }
 	}
 
-	openDemoForm.addEventListener('submit', event => {
+	openLiveForm.addEventListener('submit', event => {
 		event.preventDefault()
 		sendData()
 	});
 }
-// Open Demo Form End -----------------------------------------------------------------//
+// Open Live Form End -----------------------------------------------------------------//
 
 /* Form Submission END -------------------------------------------------------------------------------------------------------------------------------*/
