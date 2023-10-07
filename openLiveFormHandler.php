@@ -61,7 +61,7 @@ $message = "Name: " . $name . "\r\nSurname: " . $surname . "\r\nEmail: " . $emai
 
 // Sending form data on email
 // mail('dan@atomiqconsulting.com', 'New request for open demo from Apex website', $message);
-mail('spbabiak@gmail.com', 'New request for open demo from Apex website', $message);
+mail('spbabiak@gmail.com', 'New request for open live from Apex website', $message);
 
 echo 'Thank you! Message have been sent successfully. We will contact you as soon as possible';
 
