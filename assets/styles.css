@@ -556,9 +556,22 @@ li > ul {
 	display: inline-block;
 	width: 60px;
 	height: 60px;
-	background-image: url('../imgs/icon_leverage.png');
+	background-color: #04d9d9;
+	border-radius: 4px;
+	/* background-image: url('../imgs/icon_leverage.png'); */
 	background-repeat: no-repeat;
 	background-size: cover;
+	position: relative;
+}
+.icon-leverage::after {
+	content: '1:200';
+	position: absolute;
+	top: 0;
+	left: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: 600;	
 }
 .icon-trading {
 	display: inline-block;
